@@ -1,0 +1,14 @@
+streamlit>=1.46.0
+google-genai>=1.28.0
+python-dotenv>=1.1.1
+
+chromadb>=1.0.15
+pypdf>=5.8.0
+sentence-transformers
+torch
+pandas>=2.3.1
+numpy>=2.3.1
+tqdm>=4.67.1
+
+ragas
+datasets

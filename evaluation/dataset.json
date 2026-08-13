@@ -1,0 +1,29 @@
+[
+  {
+    "question": "How to install Active Directory?",
+    "ground_truth": "Install AD DS role, configure DNS, and promote server to domain controller.",
+    "expected_keywords": [
+      "AD DS",
+      "DNS",
+      "Domain Controller"
+    ]
+  },
+  {
+    "question": "What is VMware vMotion?",
+    "ground_truth": "vMotion migrates running virtual machines between ESXi hosts without downtime.",
+    "expected_keywords": [
+      "VM",
+      "ESXi",
+      "migration"
+    ]
+  },
+  {
+    "question": "How to configure Exchange DAG?",
+    "ground_truth": "Database Availability Group provides mailbox database redundancy.",
+    "expected_keywords": [
+      "DAG",
+      "Mailbox",
+      "Replication"
+    ]
+  }
+]
