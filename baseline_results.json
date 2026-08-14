@@ -1,0 +1,1987 @@
+{
+  "evaluation": "Baseline Vector Retrieval",
+  "retrieval_method": "BGE + ChromaDB",
+  "total_questions": 29,
+  "positive_questions": 26,
+  "negative_questions": 3,
+  "metrics": {
+    "Hit@1": 0.6538461538461539,
+    "Hit@3": 0.7307692307692307,
+    "Hit@5": 0.8076923076923077,
+    "Hit@10": 0.8461538461538461,
+    "MRR": 0.7096153846153845
+  },
+  "positive_results": [
+    {
+      "id": "ad_001",
+      "question": "What is an authoritative restore of SYSVOL?",
+      "expected_source": "active_directory_operation_guide_part_1.pdf",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 27,
+          "distance": 0.11272501945495605
+        },
+        {
+          "rank": 2,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 32,
+          "distance": 0.13915419578552246
+        },
+        {
+          "rank": 3,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 27,
+          "distance": 0.14290380477905273
+        },
+        {
+          "rank": 4,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 32,
+          "distance": 0.15200042724609375
+        },
+        {
+          "rank": 5,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 27,
+          "distance": 0.1546494960784912
+        },
+        {
+          "rank": 6,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 27,
+          "distance": 0.17563068866729736
+        },
+        {
+          "rank": 7,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 26,
+          "distance": 0.17606234550476074
+        },
+        {
+          "rank": 8,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 32,
+          "distance": 0.17707866430282593
+        },
+        {
+          "rank": 9,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 27,
+          "distance": 0.1797279715538025
+        },
+        {
+          "rank": 10,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 27,
+          "distance": 0.18914443254470825
+        }
+      ]
+    },
+    {
+      "id": "ad_002",
+      "question": "What is a non-authoritative restore of SYSVOL?",
+      "expected_source": "active_directory_operation_guide_part_1.pdf",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 27,
+          "distance": 0.13788443803787231
+        },
+        {
+          "rank": 2,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 32,
+          "distance": 0.1563718318939209
+        },
+        {
+          "rank": 3,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 26,
+          "distance": 0.16253745555877686
+        },
+        {
+          "rank": 4,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 32,
+          "distance": 0.16519159078598022
+        },
+        {
+          "rank": 5,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 27,
+          "distance": 0.16721594333648682
+        },
+        {
+          "rank": 6,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 27,
+          "distance": 0.17842817306518555
+        },
+        {
+          "rank": 7,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 27,
+          "distance": 0.17887437343597412
+        },
+        {
+          "rank": 8,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 32,
+          "distance": 0.18256449699401855
+        },
+        {
+          "rank": 9,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 27,
+          "distance": 0.1936243176460266
+        },
+        {
+          "rank": 10,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 26,
+          "distance": 0.19931024312973022
+        }
+      ]
+    },
+    {
+      "id": "ad_003",
+      "question": "What is the purpose of Active Directory replication?",
+      "expected_source": "active_directory_operation_guide_part_1.pdf",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 166,
+          "distance": 0.20066821575164795
+        },
+        {
+          "rank": 2,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 166,
+          "distance": 0.20808839797973633
+        },
+        {
+          "rank": 3,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 18,
+          "distance": 0.2221832275390625
+        },
+        {
+          "rank": 4,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 83,
+          "distance": 0.2248152494430542
+        },
+        {
+          "rank": 5,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 168,
+          "distance": 0.22534650564193726
+        },
+        {
+          "rank": 6,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 102,
+          "distance": 0.22716796398162842
+        },
+        {
+          "rank": 7,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 102,
+          "distance": 0.22716796398162842
+        },
+        {
+          "rank": 8,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 23,
+          "distance": 0.22920680046081543
+        },
+        {
+          "rank": 9,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 24,
+          "distance": 0.2300506830215454
+        },
+        {
+          "rank": 10,
+          "source": "exchange-servertoc.pdf",
+          "page": 996,
+          "distance": 0.2304365634918213
+        }
+      ]
+    },
+    {
+      "id": "ad_004",
+      "question": "What is a domain controller?",
+      "expected_source": "active_directory_operation_guide_part_1.pdf",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 69,
+          "distance": 0.22603893280029297
+        },
+        {
+          "rank": 2,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 69,
+          "distance": 0.22603893280029297
+        },
+        {
+          "rank": 3,
+          "source": "exchange-servertoc.pdf",
+          "page": 1893,
+          "distance": 0.2331932783126831
+        },
+        {
+          "rank": 4,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 91,
+          "distance": 0.24119198322296143
+        },
+        {
+          "rank": 5,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 104,
+          "distance": 0.2431868314743042
+        },
+        {
+          "rank": 6,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 50,
+          "distance": 0.24392354488372803
+        },
+        {
+          "rank": 7,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 50,
+          "distance": 0.2443145513534546
+        },
+        {
+          "rank": 8,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 48,
+          "distance": 0.24890708923339844
+        },
+        {
+          "rank": 9,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 165,
+          "distance": 0.24999260902404785
+        },
+        {
+          "rank": 10,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 18,
+          "distance": 0.2507767677307129
+        }
+      ]
+    },
+    {
+      "id": "ad_005",
+      "question": "What is Active Directory Domain Services?",
+      "expected_source": "active_directory_operation_guide_part_1.pdf",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 10,
+          "distance": 0.18858230113983154
+        },
+        {
+          "rank": 2,
+          "source": "exchange-servertoc.pdf",
+          "page": 480,
+          "distance": 0.19033467769622803
+        },
+        {
+          "rank": 3,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 40,
+          "distance": 0.21546310186386108
+        },
+        {
+          "rank": 4,
+          "source": "exchange-servertoc.pdf",
+          "page": 887,
+          "distance": 0.22175812721252441
+        },
+        {
+          "rank": 5,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 48,
+          "distance": 0.22594571113586426
+        },
+        {
+          "rank": 6,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 136,
+          "distance": 0.22619342803955078
+        },
+        {
+          "rank": 7,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 18,
+          "distance": 0.22716641426086426
+        },
+        {
+          "rank": 8,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 135,
+          "distance": 0.2282000184059143
+        },
+        {
+          "rank": 9,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 40,
+          "distance": 0.22828149795532227
+        },
+        {
+          "rank": 10,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 40,
+          "distance": 0.22880184650421143
+        }
+      ]
+    },
+    {
+      "id": "vm_001",
+      "question": "What is VMware vMotion?",
+      "expected_source": "vmware-vsphere-7-0.pdf",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1743,
+          "distance": 0.159385085105896
+        },
+        {
+          "rank": 2,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1877,
+          "distance": 0.1754637360572815
+        },
+        {
+          "rank": 3,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2513,
+          "distance": 0.18528473377227783
+        },
+        {
+          "rank": 4,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1839,
+          "distance": 0.19131088256835938
+        },
+        {
+          "rank": 5,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2221,
+          "distance": 0.19131618738174438
+        },
+        {
+          "rank": 6,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 21,
+          "distance": 0.1998921036720276
+        },
+        {
+          "rank": 7,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2105,
+          "distance": 0.20100951194763184
+        },
+        {
+          "rank": 8,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1821,
+          "distance": 0.20337629318237305
+        },
+        {
+          "rank": 9,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2199,
+          "distance": 0.20517122745513916
+        },
+        {
+          "rank": 10,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1802,
+          "distance": 0.20657110214233398
+        }
+      ]
+    },
+    {
+      "id": "vm_002",
+      "question": "What is a virtual machine snapshot in VMware?",
+      "expected_source": "vmware-vsphere-7-0.pdf",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3376,
+          "distance": 0.13306736946105957
+        },
+        {
+          "rank": 2,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2072,
+          "distance": 0.13789081573486328
+        },
+        {
+          "rank": 3,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3380,
+          "distance": 0.1408933401107788
+        },
+        {
+          "rank": 4,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2067,
+          "distance": 0.14483243227005005
+        },
+        {
+          "rank": 5,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2070,
+          "distance": 0.16583538055419922
+        },
+        {
+          "rank": 6,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3379,
+          "distance": 0.16583538055419922
+        },
+        {
+          "rank": 7,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3380,
+          "distance": 0.16793501377105713
+        },
+        {
+          "rank": 8,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2069,
+          "distance": 0.17028725147247314
+        },
+        {
+          "rank": 9,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3378,
+          "distance": 0.17028725147247314
+        },
+        {
+          "rank": 10,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3383,
+          "distance": 0.17169713973999023
+        }
+      ]
+    },
+    {
+      "id": "vm_003",
+      "question": "What is vSphere HA?",
+      "expected_source": "vmware-vsphere-7-0.pdf",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3086,
+          "distance": 0.2381693720817566
+        },
+        {
+          "rank": 2,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3103,
+          "distance": 0.2480860948562622
+        },
+        {
+          "rank": 3,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 483,
+          "distance": 0.24849820137023926
+        },
+        {
+          "rank": 4,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 538,
+          "distance": 0.24849820137023926
+        },
+        {
+          "rank": 5,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1,
+          "distance": 0.25211644172668457
+        },
+        {
+          "rank": 6,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3088,
+          "distance": 0.2559206485748291
+        },
+        {
+          "rank": 7,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 207,
+          "distance": 0.2572284936904907
+        },
+        {
+          "rank": 8,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 90,
+          "distance": 0.25910210609436035
+        },
+        {
+          "rank": 9,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 685,
+          "distance": 0.2631470561027527
+        },
+        {
+          "rank": 10,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 653,
+          "distance": 0.2632639408111572
+        }
+      ]
+    },
+    {
+      "id": "vm_004",
+      "question": "What is vSphere DRS?",
+      "expected_source": "vmware-vsphere-7-0.pdf",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3038,
+          "distance": 0.22282320261001587
+        },
+        {
+          "rank": 2,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3035,
+          "distance": 0.22466766834259033
+        },
+        {
+          "rank": 3,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 60,
+          "distance": 0.22767400741577148
+        },
+        {
+          "rank": 4,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3032,
+          "distance": 0.22927641868591309
+        },
+        {
+          "rank": 5,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3019,
+          "distance": 0.2348904013633728
+        },
+        {
+          "rank": 6,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1758,
+          "distance": 0.2390902042388916
+        },
+        {
+          "rank": 7,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 667,
+          "distance": 0.2400560975074768
+        },
+        {
+          "rank": 8,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1,
+          "distance": 0.24111628532409668
+        },
+        {
+          "rank": 9,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3101,
+          "distance": 0.24175894260406494
+        },
+        {
+          "rank": 10,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3026,
+          "distance": 0.24513471126556396
+        }
+      ]
+    },
+    {
+      "id": "vm_005",
+      "question": "What is an ESXi host?",
+      "expected_source": "vmware-vsphere-7-0.pdf",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3263,
+          "distance": 0.15871703624725342
+        },
+        {
+          "rank": 2,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 978,
+          "distance": 0.18420839309692383
+        },
+        {
+          "rank": 3,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 77,
+          "distance": 0.1925322413444519
+        },
+        {
+          "rank": 4,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1057,
+          "distance": 0.1933499574661255
+        },
+        {
+          "rank": 5,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1320,
+          "distance": 0.19590461254119873
+        },
+        {
+          "rank": 6,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2911,
+          "distance": 0.20045346021652222
+        },
+        {
+          "rank": 7,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2725,
+          "distance": 0.20232105255126953
+        },
+        {
+          "rank": 8,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1057,
+          "distance": 0.2045736312866211
+        },
+        {
+          "rank": 9,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 72,
+          "distance": 0.21055114269256592
+        },
+        {
+          "rank": 10,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1204,
+          "distance": 0.21101635694503784
+        }
+      ]
+    },
+    {
+      "id": "vm_006",
+      "question": "What is a vCenter Server?",
+      "expected_source": "vmware-vsphere-7-0.pdf",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1260,
+          "distance": 0.15529698133468628
+        },
+        {
+          "rank": 2,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1159,
+          "distance": 0.176560640335083
+        },
+        {
+          "rank": 3,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1736,
+          "distance": 0.17830049991607666
+        },
+        {
+          "rank": 4,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1736,
+          "distance": 0.18072950839996338
+        },
+        {
+          "rank": 5,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1813,
+          "distance": 0.18690073490142822
+        },
+        {
+          "rank": 6,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 723,
+          "distance": 0.18958956003189087
+        },
+        {
+          "rank": 7,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1068,
+          "distance": 0.1897640824317932
+        },
+        {
+          "rank": 8,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 978,
+          "distance": 0.19184428453445435
+        },
+        {
+          "rank": 9,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1159,
+          "distance": 0.19430088996887207
+        },
+        {
+          "rank": 10,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1300,
+          "distance": 0.19582092761993408
+        }
+      ]
+    },
+    {
+      "id": "power_001",
+      "question": "What is a logical partition (LPAR) in IBM PowerVM?",
+      "expected_source": "IBM PowerVM.pdf",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "IBM PowerVM.pdf",
+          "page": 30,
+          "distance": 0.17322611808776855
+        },
+        {
+          "rank": 2,
+          "source": "IBM PowerVM.pdf",
+          "page": 156,
+          "distance": 0.17740505933761597
+        },
+        {
+          "rank": 3,
+          "source": "IBM PowerVM.pdf",
+          "page": 156,
+          "distance": 0.18418800830841064
+        },
+        {
+          "rank": 4,
+          "source": "IBM PowerVM.pdf",
+          "page": 229,
+          "distance": 0.1845628023147583
+        },
+        {
+          "rank": 5,
+          "source": "IBM PowerVM.pdf",
+          "page": 229,
+          "distance": 0.1845628023147583
+        },
+        {
+          "rank": 6,
+          "source": "IBM PowerVM.pdf",
+          "page": 30,
+          "distance": 0.19430691003799438
+        },
+        {
+          "rank": 7,
+          "source": "IBM PowerVM.pdf",
+          "page": 153,
+          "distance": 0.1958829164505005
+        },
+        {
+          "rank": 8,
+          "source": "IBM PowerVM.pdf",
+          "page": 195,
+          "distance": 0.19738399982452393
+        },
+        {
+          "rank": 9,
+          "source": "IBM PowerVM.pdf",
+          "page": 195,
+          "distance": 0.19738411903381348
+        },
+        {
+          "rank": 10,
+          "source": "IBM PowerVM.pdf",
+          "page": 153,
+          "distance": 0.2058396339416504
+        }
+      ]
+    },
+    {
+      "id": "power_002",
+      "question": "What is PowerVM?",
+      "expected_source": "IBM PowerVM.pdf",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "IBM PowerVM.pdf",
+          "page": 90,
+          "distance": 0.17696309089660645
+        },
+        {
+          "rank": 2,
+          "source": "IBM PowerVM.pdf",
+          "page": 90,
+          "distance": 0.17696309089660645
+        },
+        {
+          "rank": 3,
+          "source": "IBM PowerVM.pdf",
+          "page": 220,
+          "distance": 0.17705905437469482
+        },
+        {
+          "rank": 4,
+          "source": "IBM PowerVM.pdf",
+          "page": 220,
+          "distance": 0.17705905437469482
+        },
+        {
+          "rank": 5,
+          "source": "IBM PowerVM.pdf",
+          "page": 16,
+          "distance": 0.19778132438659668
+        },
+        {
+          "rank": 6,
+          "source": "IBM PowerVM.pdf",
+          "page": 16,
+          "distance": 0.19847071170806885
+        },
+        {
+          "rank": 7,
+          "source": "IBM PowerVM.pdf",
+          "page": 16,
+          "distance": 0.1985192894935608
+        },
+        {
+          "rank": 8,
+          "source": "IBM PowerVM.pdf",
+          "page": 5,
+          "distance": 0.20881354808807373
+        },
+        {
+          "rank": 9,
+          "source": "IBM PowerVM.pdf",
+          "page": 16,
+          "distance": 0.20901823043823242
+        },
+        {
+          "rank": 10,
+          "source": "IBM PowerVM.pdf",
+          "page": 233,
+          "distance": 0.21141719818115234
+        }
+      ]
+    },
+    {
+      "id": "power_003",
+      "question": "What is a Virtual I/O Server (VIOS)?",
+      "expected_source": "IBM PowerVM.pdf",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "IBM PowerVM.pdf",
+          "page": 25,
+          "distance": 0.15915822982788086
+        },
+        {
+          "rank": 2,
+          "source": "IBM PowerVM.pdf",
+          "page": 153,
+          "distance": 0.1927928924560547
+        },
+        {
+          "rank": 3,
+          "source": "IBM PowerVM.pdf",
+          "page": 25,
+          "distance": 0.19703203439712524
+        },
+        {
+          "rank": 4,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2627,
+          "distance": 0.19726097583770752
+        },
+        {
+          "rank": 5,
+          "source": "IBM PowerVM.pdf",
+          "page": 25,
+          "distance": 0.20199990272521973
+        },
+        {
+          "rank": 6,
+          "source": "IBM PowerVM.pdf",
+          "page": 6,
+          "distance": 0.2052288055419922
+        },
+        {
+          "rank": 7,
+          "source": "IBM PowerVM.pdf",
+          "page": 123,
+          "distance": 0.20541882514953613
+        },
+        {
+          "rank": 8,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 46,
+          "distance": 0.20679211616516113
+        },
+        {
+          "rank": 9,
+          "source": "IBM PowerVM.pdf",
+          "page": 18,
+          "distance": 0.2079857587814331
+        },
+        {
+          "rank": 10,
+          "source": "IBM PowerVM.pdf",
+          "page": 6,
+          "distance": 0.20953333377838135
+        }
+      ]
+    },
+    {
+      "id": "power_004",
+      "question": "What is dynamic LPAR?",
+      "expected_source": "IBM PowerVM.pdf",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "IBM PowerVM.pdf",
+          "page": 211,
+          "distance": 0.2731994390487671
+        },
+        {
+          "rank": 2,
+          "source": "IBM PowerVM.pdf",
+          "page": 211,
+          "distance": 0.27430611848831177
+        },
+        {
+          "rank": 3,
+          "source": "IBM PowerVM.pdf",
+          "page": 29,
+          "distance": 0.2757982611656189
+        },
+        {
+          "rank": 4,
+          "source": "IBM PowerVM.pdf",
+          "page": 105,
+          "distance": 0.27637648582458496
+        },
+        {
+          "rank": 5,
+          "source": "IBM PowerVM.pdf",
+          "page": 105,
+          "distance": 0.27637648582458496
+        },
+        {
+          "rank": 6,
+          "source": "IBM PowerVM.pdf",
+          "page": 165,
+          "distance": 0.28528547286987305
+        },
+        {
+          "rank": 7,
+          "source": "IBM PowerVM.pdf",
+          "page": 165,
+          "distance": 0.28701460361480713
+        },
+        {
+          "rank": 8,
+          "source": "IBM PowerVM.pdf",
+          "page": 71,
+          "distance": 0.2926258444786072
+        },
+        {
+          "rank": 9,
+          "source": "IBM PowerVM.pdf",
+          "page": 66,
+          "distance": 0.2938423156738281
+        },
+        {
+          "rank": 10,
+          "source": "IBM PowerVM.pdf",
+          "page": 29,
+          "distance": 0.29996156692504883
+        }
+      ]
+    },
+    {
+      "id": "power_005",
+      "question": "What is an IBM Power Systems logical partition?",
+      "expected_source": "IBM PowerVM.pdf",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "IBM PowerVM.pdf",
+          "page": 30,
+          "distance": 0.21032249927520752
+        },
+        {
+          "rank": 2,
+          "source": "IBM PowerVM.pdf",
+          "page": 231,
+          "distance": 0.21950805187225342
+        },
+        {
+          "rank": 3,
+          "source": "IBM PowerVM.pdf",
+          "page": 30,
+          "distance": 0.22529631853103638
+        },
+        {
+          "rank": 4,
+          "source": "IBM PowerVM.pdf",
+          "page": 48,
+          "distance": 0.22622013092041016
+        },
+        {
+          "rank": 5,
+          "source": "IBM PowerVM.pdf",
+          "page": 195,
+          "distance": 0.234239399433136
+        },
+        {
+          "rank": 6,
+          "source": "IBM PowerVM.pdf",
+          "page": 195,
+          "distance": 0.23423945903778076
+        },
+        {
+          "rank": 7,
+          "source": "IBM PowerVM.pdf",
+          "page": 231,
+          "distance": 0.23446202278137207
+        },
+        {
+          "rank": 8,
+          "source": "IBM PowerVM.pdf",
+          "page": 231,
+          "distance": 0.23826080560684204
+        },
+        {
+          "rank": 9,
+          "source": "IBM PowerVM.pdf",
+          "page": 48,
+          "distance": 0.2388063669204712
+        },
+        {
+          "rank": 10,
+          "source": "IBM PowerVM.pdf",
+          "page": 153,
+          "distance": 0.2435072660446167
+        }
+      ]
+    },
+    {
+      "id": "win_001",
+      "question": "What is Windows Server?",
+      "expected_source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+      "rank": 2,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 142,
+          "distance": 0.2251102328300476
+        },
+        {
+          "rank": 2,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 15,
+          "distance": 0.24676549434661865
+        },
+        {
+          "rank": 3,
+          "source": "Microsoft.pdf",
+          "page": 15,
+          "distance": 0.24676549434661865
+        },
+        {
+          "rank": 4,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 142,
+          "distance": 0.25546133518218994
+        },
+        {
+          "rank": 5,
+          "source": "exchange-servertoc.pdf",
+          "page": 852,
+          "distance": 0.26585447788238525
+        },
+        {
+          "rank": 6,
+          "source": "exchange-servertoc.pdf",
+          "page": 885,
+          "distance": 0.26979732513427734
+        },
+        {
+          "rank": 7,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 8,
+          "distance": 0.27658069133758545
+        },
+        {
+          "rank": 8,
+          "source": "Microsoft.pdf",
+          "page": 8,
+          "distance": 0.27658069133758545
+        },
+        {
+          "rank": 9,
+          "source": "exchange-servertoc.pdf",
+          "page": 357,
+          "distance": 0.2787126302719116
+        },
+        {
+          "rank": 10,
+          "source": "exchange-servertoc.pdf",
+          "page": 158,
+          "distance": 0.28033924102783203
+        }
+      ]
+    },
+    {
+      "id": "win_002",
+      "question": "What is the purpose of Windows Server administration?",
+      "expected_source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+      "rank": 4,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "vmware-product-guide-18-may.pdf",
+          "page": 19,
+          "distance": 0.23828542232513428
+        },
+        {
+          "rank": 2,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 142,
+          "distance": 0.2447068691253662
+        },
+        {
+          "rank": 3,
+          "source": "exchange-servertoc.pdf",
+          "page": 800,
+          "distance": 0.254450261592865
+        },
+        {
+          "rank": 4,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 18,
+          "distance": 0.2645910978317261
+        },
+        {
+          "rank": 5,
+          "source": "Microsoft.pdf",
+          "page": 18,
+          "distance": 0.2645910978317261
+        },
+        {
+          "rank": 6,
+          "source": "exchange-servertoc.pdf",
+          "page": 885,
+          "distance": 0.26465797424316406
+        },
+        {
+          "rank": 7,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 18,
+          "distance": 0.26703310012817383
+        },
+        {
+          "rank": 8,
+          "source": "Microsoft.pdf",
+          "page": 18,
+          "distance": 0.26703310012817383
+        },
+        {
+          "rank": 9,
+          "source": "exchange-servertoc.pdf",
+          "page": 674,
+          "distance": 0.2683676481246948
+        },
+        {
+          "rank": 10,
+          "source": "exchange-servertoc.pdf",
+          "page": 2876,
+          "distance": 0.27151548862457275
+        }
+      ]
+    },
+    {
+      "id": "win_003",
+      "question": "What is Azure Stack?",
+      "expected_source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 8,
+          "distance": 0.2440885305404663
+        },
+        {
+          "rank": 2,
+          "source": "Microsoft.pdf",
+          "page": 8,
+          "distance": 0.2440885305404663
+        },
+        {
+          "rank": 3,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 8,
+          "distance": 0.26970404386520386
+        },
+        {
+          "rank": 4,
+          "source": "Microsoft.pdf",
+          "page": 8,
+          "distance": 0.26970404386520386
+        },
+        {
+          "rank": 5,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 12,
+          "distance": 0.28947651386260986
+        },
+        {
+          "rank": 6,
+          "source": "Microsoft.pdf",
+          "page": 12,
+          "distance": 0.28947651386260986
+        },
+        {
+          "rank": 7,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 1,
+          "distance": 0.28980278968811035
+        },
+        {
+          "rank": 8,
+          "source": "Microsoft.pdf",
+          "page": 1,
+          "distance": 0.28980278968811035
+        },
+        {
+          "rank": 9,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 1,
+          "distance": 0.28980278968811035
+        },
+        {
+          "rank": 10,
+          "source": "Microsoft.pdf",
+          "page": 1,
+          "distance": 0.28980278968811035
+        }
+      ]
+    },
+    {
+      "id": "win_004",
+      "question": "What is Windows Server management?",
+      "expected_source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+      "rank": 5,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "exchange-servertoc.pdf",
+          "page": 800,
+          "distance": 0.21642756462097168
+        },
+        {
+          "rank": 2,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 142,
+          "distance": 0.23096466064453125
+        },
+        {
+          "rank": 3,
+          "source": "IBM PowerVM.pdf",
+          "page": 217,
+          "distance": 0.2605550289154053
+        },
+        {
+          "rank": 4,
+          "source": "IBM PowerVM.pdf",
+          "page": 217,
+          "distance": 0.26207029819488525
+        },
+        {
+          "rank": 5,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 15,
+          "distance": 0.2621760964393616
+        },
+        {
+          "rank": 6,
+          "source": "Microsoft.pdf",
+          "page": 15,
+          "distance": 0.2621760964393616
+        },
+        {
+          "rank": 7,
+          "source": "exchange-servertoc.pdf",
+          "page": 357,
+          "distance": 0.26518887281417847
+        },
+        {
+          "rank": 8,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 151,
+          "distance": 0.26556289196014404
+        },
+        {
+          "rank": 9,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 138,
+          "distance": 0.26707565784454346
+        },
+        {
+          "rank": 10,
+          "source": "exchange-servertoc.pdf",
+          "page": 479,
+          "distance": 0.26750683784484863
+        }
+      ]
+    },
+    {
+      "id": "ms_001",
+      "question": "What is Microsoft server administration?",
+      "expected_source": "Microsoft.pdf",
+      "rank": 6,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "exchange-servertoc.pdf",
+          "page": 800,
+          "distance": 0.23404037952423096
+        },
+        {
+          "rank": 2,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 142,
+          "distance": 0.26438528299331665
+        },
+        {
+          "rank": 3,
+          "source": "exchange-servertoc.pdf",
+          "page": 885,
+          "distance": 0.2708383798599243
+        },
+        {
+          "rank": 4,
+          "source": "exchange-servertoc.pdf",
+          "page": 158,
+          "distance": 0.2709839344024658
+        },
+        {
+          "rank": 5,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 15,
+          "distance": 0.27223849296569824
+        },
+        {
+          "rank": 6,
+          "source": "Microsoft.pdf",
+          "page": 15,
+          "distance": 0.27223849296569824
+        },
+        {
+          "rank": 7,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 8,
+          "distance": 0.2757793664932251
+        },
+        {
+          "rank": 8,
+          "source": "Microsoft.pdf",
+          "page": 8,
+          "distance": 0.2757793664932251
+        },
+        {
+          "rank": 9,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 1,
+          "distance": 0.2798362374305725
+        },
+        {
+          "rank": 10,
+          "source": "Microsoft.pdf",
+          "page": 1,
+          "distance": 0.2798362374305725
+        }
+      ]
+    },
+    {
+      "id": "ms_002",
+      "question": "What are common Microsoft Windows server management tasks?",
+      "expected_source": "Microsoft.pdf",
+      "rank": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "exchange-servertoc.pdf",
+          "page": 2876,
+          "distance": 0.2383328676223755
+        },
+        {
+          "rank": 2,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 137,
+          "distance": 0.24267840385437012
+        },
+        {
+          "rank": 3,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 138,
+          "distance": 0.24567168951034546
+        },
+        {
+          "rank": 4,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 137,
+          "distance": 0.2478206753730774
+        },
+        {
+          "rank": 5,
+          "source": "exchange-servertoc.pdf",
+          "page": 800,
+          "distance": 0.24876368045806885
+        },
+        {
+          "rank": 6,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 142,
+          "distance": 0.25267916917800903
+        },
+        {
+          "rank": 7,
+          "source": "IBM PowerVM.pdf",
+          "page": 197,
+          "distance": 0.2559870481491089
+        },
+        {
+          "rank": 8,
+          "source": "IBM PowerVM.pdf",
+          "page": 197,
+          "distance": 0.2563892602920532
+        },
+        {
+          "rank": 9,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 14,
+          "distance": 0.2590301036834717
+        },
+        {
+          "rank": 10,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 14,
+          "distance": 0.25967323780059814
+        }
+      ]
+    },
+    {
+      "id": "ms_003",
+      "question": "What is Windows system administration?",
+      "expected_source": "Microsoft.pdf",
+      "rank": 3,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 138,
+          "distance": 0.27358561754226685
+        },
+        {
+          "rank": 2,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 16,
+          "distance": 0.27701520919799805
+        },
+        {
+          "rank": 3,
+          "source": "Microsoft.pdf",
+          "page": 16,
+          "distance": 0.27701520919799805
+        },
+        {
+          "rank": 4,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 16,
+          "distance": 0.2796059846878052
+        },
+        {
+          "rank": 5,
+          "source": "Microsoft.pdf",
+          "page": 16,
+          "distance": 0.2796059846878052
+        },
+        {
+          "rank": 6,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 13,
+          "distance": 0.2873798608779907
+        },
+        {
+          "rank": 7,
+          "source": "vmware-product-guide-18-may.pdf",
+          "page": 31,
+          "distance": 0.2873961329460144
+        },
+        {
+          "rank": 8,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 21,
+          "distance": 0.29091763496398926
+        },
+        {
+          "rank": 9,
+          "source": "Microsoft.pdf",
+          "page": 21,
+          "distance": 0.29091763496398926
+        },
+        {
+          "rank": 10,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1117,
+          "distance": 0.2921711206436157
+        }
+      ]
+    },
+    {
+      "id": "alg_001",
+      "question": "What is the purpose of the secured administrative guide?",
+      "expected_source": "aLG-821512-001_secured.pdf",
+      "rank": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 40,
+          "distance": 0.24187374114990234
+        },
+        {
+          "rank": 2,
+          "source": "Microsoft.pdf",
+          "page": 40,
+          "distance": 0.24187374114990234
+        },
+        {
+          "rank": 3,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 30,
+          "distance": 0.29769933223724365
+        },
+        {
+          "rank": 4,
+          "source": "Microsoft.pdf",
+          "page": 30,
+          "distance": 0.29769933223724365
+        },
+        {
+          "rank": 5,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2840,
+          "distance": 0.2992783188819885
+        },
+        {
+          "rank": 6,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2841,
+          "distance": 0.2997405529022217
+        },
+        {
+          "rank": 7,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 27,
+          "distance": 0.3003782033920288
+        },
+        {
+          "rank": 8,
+          "source": "Microsoft.pdf",
+          "page": 27,
+          "distance": 0.3003782033920288
+        },
+        {
+          "rank": 9,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 27,
+          "distance": 0.30347156524658203
+        },
+        {
+          "rank": 10,
+          "source": "Microsoft.pdf",
+          "page": 27,
+          "distance": 0.30347156524658203
+        }
+      ]
+    },
+    {
+      "id": "alg_002",
+      "question": "What administrative procedures are described in the guide?",
+      "expected_source": "aLG-821512-001_secured.pdf",
+      "rank": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 9,
+          "distance": 0.21999835968017578
+        },
+        {
+          "rank": 2,
+          "source": "Microsoft.pdf",
+          "page": 9,
+          "distance": 0.21999835968017578
+        },
+        {
+          "rank": 3,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 9,
+          "distance": 0.24230599403381348
+        },
+        {
+          "rank": 4,
+          "source": "Microsoft.pdf",
+          "page": 9,
+          "distance": 0.24230599403381348
+        },
+        {
+          "rank": 5,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 8,
+          "distance": 0.27014249563217163
+        },
+        {
+          "rank": 6,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 8,
+          "distance": 0.27840346097946167
+        },
+        {
+          "rank": 7,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 3,
+          "distance": 0.291994571685791
+        },
+        {
+          "rank": 8,
+          "source": "Microsoft.pdf",
+          "page": 3,
+          "distance": 0.291994571685791
+        },
+        {
+          "rank": 9,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 3,
+          "distance": 0.291994571685791
+        },
+        {
+          "rank": 10,
+          "source": "Microsoft.pdf",
+          "page": 3,
+          "distance": 0.291994571685791
+        }
+      ]
+    },
+    {
+      "id": "alg_003",
+      "question": "What configuration information is provided in the guide?",
+      "expected_source": "aLG-821512-001_secured.pdf",
+      "rank": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 40,
+          "distance": 0.20793575048446655
+        },
+        {
+          "rank": 2,
+          "source": "Microsoft.pdf",
+          "page": 40,
+          "distance": 0.20793575048446655
+        },
+        {
+          "rank": 3,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 9,
+          "distance": 0.2684563994407654
+        },
+        {
+          "rank": 4,
+          "source": "Microsoft.pdf",
+          "page": 9,
+          "distance": 0.2684563994407654
+        },
+        {
+          "rank": 5,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 102,
+          "distance": 0.28120100498199463
+        },
+        {
+          "rank": 6,
+          "source": "Microsoft.pdf",
+          "page": 102,
+          "distance": 0.28120100498199463
+        },
+        {
+          "rank": 7,
+          "source": "IBM PowerVM.pdf",
+          "page": 153,
+          "distance": 0.28371381759643555
+        },
+        {
+          "rank": 8,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 68,
+          "distance": 0.28451400995254517
+        },
+        {
+          "rank": 9,
+          "source": "Microsoft.pdf",
+          "page": 68,
+          "distance": 0.28451400995254517
+        },
+        {
+          "rank": 10,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 8,
+          "distance": 0.28476858139038086
+        }
+      ]
+    }
+  ],
+  "negative_results": [
+    {
+      "id": "neg_001",
+      "question": "What is the population of Japan?",
+      "expected_source": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "exchange-servertoc.pdf",
+          "page": 2428,
+          "distance": 0.33479106426239014
+        },
+        {
+          "rank": 2,
+          "source": "exchange-servertoc.pdf",
+          "page": 2428,
+          "distance": 0.35913920402526855
+        },
+        {
+          "rank": 3,
+          "source": "exchange-servertoc.pdf",
+          "page": 2428,
+          "distance": 0.3826524019241333
+        },
+        {
+          "rank": 4,
+          "source": "exchange-servertoc.pdf",
+          "page": 2426,
+          "distance": 0.3899348974227905
+        },
+        {
+          "rank": 5,
+          "source": "exchange-servertoc.pdf",
+          "page": 2425,
+          "distance": 0.40182173252105713
+        },
+        {
+          "rank": 6,
+          "source": "exchange-servertoc.pdf",
+          "page": 2429,
+          "distance": 0.4067124128341675
+        },
+        {
+          "rank": 7,
+          "source": "exchange-servertoc.pdf",
+          "page": 2427,
+          "distance": 0.4104245901107788
+        },
+        {
+          "rank": 8,
+          "source": "exchange-servertoc.pdf",
+          "page": 431,
+          "distance": 0.42863643169403076
+        },
+        {
+          "rank": 9,
+          "source": "exchange-servertoc.pdf",
+          "page": 77,
+          "distance": 0.4358741044998169
+        },
+        {
+          "rank": 10,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1200,
+          "distance": 0.4363532066345215
+        }
+      ]
+    },
+    {
+      "id": "neg_002",
+      "question": "Who won the FIFA World Cup in 2022?",
+      "expected_source": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "exchange-servertoc.pdf",
+          "page": 2959,
+          "distance": 0.41497164964675903
+        },
+        {
+          "rank": 2,
+          "source": "exchange-servertoc.pdf",
+          "page": 2015,
+          "distance": 0.415785551071167
+        },
+        {
+          "rank": 3,
+          "source": "aLG-821512-001_secured.pdf",
+          "page": 61,
+          "distance": 0.43948280811309814
+        },
+        {
+          "rank": 4,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3182,
+          "distance": 0.462715208530426
+        },
+        {
+          "rank": 5,
+          "source": "exchange-servertoc.pdf",
+          "page": 73,
+          "distance": 0.46291494369506836
+        },
+        {
+          "rank": 6,
+          "source": "exchange-servertoc.pdf",
+          "page": 70,
+          "distance": 0.46320557594299316
+        },
+        {
+          "rank": 7,
+          "source": "aLG-821512-001_secured.pdf",
+          "page": 61,
+          "distance": 0.4650074243545532
+        },
+        {
+          "rank": 8,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1512,
+          "distance": 0.4660264253616333
+        },
+        {
+          "rank": 9,
+          "source": "exchange-servertoc.pdf",
+          "page": 74,
+          "distance": 0.4661591053009033
+        },
+        {
+          "rank": 10,
+          "source": "exchange-servertoc.pdf",
+          "page": 74,
+          "distance": 0.4664849638938904
+        }
+      ]
+    },
+    {
+      "id": "neg_003",
+      "question": "What is the capital of France?",
+      "expected_source": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 311,
+          "distance": 0.4761066436767578
+        },
+        {
+          "rank": 2,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 807,
+          "distance": 0.5018061995506287
+        },
+        {
+          "rank": 3,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 623,
+          "distance": 0.5107792019844055
+        },
+        {
+          "rank": 4,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 595,
+          "distance": 0.5116904377937317
+        },
+        {
+          "rank": 5,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 324,
+          "distance": 0.5125390291213989
+        },
+        {
+          "rank": 6,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1547,
+          "distance": 0.5179112553596497
+        },
+        {
+          "rank": 7,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 899,
+          "distance": 0.5193641185760498
+        },
+        {
+          "rank": 8,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 927,
+          "distance": 0.5193641185760498
+        },
+        {
+          "rank": 9,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1682,
+          "distance": 0.5239542722702026
+        },
+        {
+          "rank": 10,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 291,
+          "distance": 0.525806188583374
+        }
+      ]
+    }
+  ]
+}

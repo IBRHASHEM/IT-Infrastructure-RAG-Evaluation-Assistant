@@ -1,5 +1,4 @@
 from tqdm import tqdm
-import time
 from document_loader import DocumentLoader
 from chunker import TextChunker
 from embeddings import EmbeddingGenerator
@@ -30,7 +29,7 @@ def main():
 
     embedder = EmbeddingGenerator()
     vector_db = VectorStore()
-
+    vector_db.reset_collection()
     print("\nCreating embeddings...\n")
 
     for i in tqdm(range(0, len(chunks), BATCH_SIZE)):

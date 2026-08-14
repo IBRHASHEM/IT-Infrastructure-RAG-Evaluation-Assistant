@@ -19,6 +19,19 @@ class VectorStore:
             metadata={"hnsw:space": "cosine"}
         )
 
+    def reset_collection(self):
+        try:
+            self.client.delete_collection(
+                name=COLLECTION_NAME
+            )
+            print(f"Deleted old collection: {COLLECTION_NAME}")
+        except Exception:
+            print("No existing collection to delete.")
+        self.collection = self.client.get_or_create_collection(
+            name=COLLECTION_NAME,
+            metadata={"hnsw:space": "cosine"}
+        )
+        print(f"Created new collection: {COLLECTION_NAME}")
     def add_chunks(self, chunks, embeddings):
 
         self.collection.add(

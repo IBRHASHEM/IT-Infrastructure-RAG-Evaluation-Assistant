@@ -1,0 +1,1806 @@
+{
+  "method": "hybrid_reranker",
+  "metrics": {
+    "hit_at_1": 0.6538461538461539,
+    "hit_at_3": 0.7307692307692307,
+    "hit_at_5": 0.7307692307692307,
+    "hit_at_10": 0.7692307692307693,
+    "mrr": 0.6965811965811965
+  },
+  "results": [
+    {
+      "id": "ad_001",
+      "question": "What is an authoritative restore of SYSVOL?",
+      "expected_source": "active_directory_operation_guide_part_1.pdf",
+      "type": "Positive",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 27,
+          "reranker_score": 0.998672366142273
+        },
+        {
+          "rank": 2,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 27,
+          "reranker_score": 0.9971572160720825
+        },
+        {
+          "rank": 3,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 27,
+          "reranker_score": 0.9869662523269653
+        },
+        {
+          "rank": 4,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 27,
+          "reranker_score": 0.9719547629356384
+        },
+        {
+          "rank": 5,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 26,
+          "reranker_score": 0.9192156791687012
+        },
+        {
+          "rank": 6,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 34,
+          "reranker_score": 0.8914194107055664
+        },
+        {
+          "rank": 7,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 34,
+          "reranker_score": 0.7449752688407898
+        },
+        {
+          "rank": 8,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 32,
+          "reranker_score": 0.7376574277877808
+        },
+        {
+          "rank": 9,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 26,
+          "reranker_score": 0.6537716388702393
+        },
+        {
+          "rank": 10,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 27,
+          "reranker_score": 0.6093674302101135
+        }
+      ]
+    },
+    {
+      "id": "ad_002",
+      "question": "What is a non-authoritative restore of SYSVOL?",
+      "expected_source": "active_directory_operation_guide_part_1.pdf",
+      "type": "Positive",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 27,
+          "reranker_score": 0.9991387128829956
+        },
+        {
+          "rank": 2,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 26,
+          "reranker_score": 0.9990260601043701
+        },
+        {
+          "rank": 3,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 26,
+          "reranker_score": 0.9979658126831055
+        },
+        {
+          "rank": 4,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 102,
+          "reranker_score": 0.9978870749473572
+        },
+        {
+          "rank": 5,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 103,
+          "reranker_score": 0.9896934628486633
+        },
+        {
+          "rank": 6,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 27,
+          "reranker_score": 0.9716511368751526
+        },
+        {
+          "rank": 7,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 107,
+          "reranker_score": 0.8806891441345215
+        },
+        {
+          "rank": 8,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 103,
+          "reranker_score": 0.7773025631904602
+        },
+        {
+          "rank": 9,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 95,
+          "reranker_score": 0.7201142907142639
+        },
+        {
+          "rank": 10,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 27,
+          "reranker_score": 0.6928924322128296
+        }
+      ]
+    },
+    {
+      "id": "ad_003",
+      "question": "What is the purpose of Active Directory replication?",
+      "expected_source": "active_directory_operation_guide_part_1.pdf",
+      "type": "Positive",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 121,
+          "reranker_score": 0.5313224196434021
+        },
+        {
+          "rank": 2,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 102,
+          "reranker_score": 0.5097640156745911
+        },
+        {
+          "rank": 3,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 83,
+          "reranker_score": 0.23545563220977783
+        },
+        {
+          "rank": 4,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 166,
+          "reranker_score": 0.1947600543498993
+        },
+        {
+          "rank": 5,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 173,
+          "reranker_score": 0.16408462822437286
+        },
+        {
+          "rank": 6,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 44,
+          "reranker_score": 0.15159767866134644
+        },
+        {
+          "rank": 7,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 121,
+          "reranker_score": 0.13675038516521454
+        },
+        {
+          "rank": 8,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 26,
+          "reranker_score": 0.13582676649093628
+        },
+        {
+          "rank": 9,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 23,
+          "reranker_score": 0.12557119131088257
+        },
+        {
+          "rank": 10,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 96,
+          "reranker_score": 0.1213640421628952
+        }
+      ]
+    },
+    {
+      "id": "ad_004",
+      "question": "What is a domain controller?",
+      "expected_source": "active_directory_operation_guide_part_1.pdf",
+      "type": "Positive",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 71,
+          "reranker_score": 0.7792683839797974
+        },
+        {
+          "rank": 2,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 34,
+          "reranker_score": 0.14118434488773346
+        },
+        {
+          "rank": 3,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 45,
+          "reranker_score": 0.12078456580638885
+        },
+        {
+          "rank": 4,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 25,
+          "reranker_score": 0.10064099729061127
+        },
+        {
+          "rank": 5,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 50,
+          "reranker_score": 0.0886269137263298
+        },
+        {
+          "rank": 6,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 165,
+          "reranker_score": 0.07858775556087494
+        },
+        {
+          "rank": 7,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 48,
+          "reranker_score": 0.07381753623485565
+        },
+        {
+          "rank": 8,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 104,
+          "reranker_score": 0.026286453008651733
+        },
+        {
+          "rank": 9,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 35,
+          "reranker_score": 0.020290210843086243
+        },
+        {
+          "rank": 10,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 91,
+          "reranker_score": 0.017052195966243744
+        }
+      ]
+    },
+    {
+      "id": "ad_005",
+      "question": "What is Active Directory Domain Services?",
+      "expected_source": "active_directory_operation_guide_part_1.pdf",
+      "type": "Positive",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 10,
+          "reranker_score": 0.6975786685943604
+        },
+        {
+          "rank": 2,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 41,
+          "reranker_score": 0.2075328230857849
+        },
+        {
+          "rank": 3,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2751,
+          "reranker_score": 0.18191957473754883
+        },
+        {
+          "rank": 4,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 153,
+          "reranker_score": 0.15563428401947021
+        },
+        {
+          "rank": 5,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 37,
+          "reranker_score": 0.11684247106313705
+        },
+        {
+          "rank": 6,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 132,
+          "reranker_score": 0.08093435317277908
+        },
+        {
+          "rank": 7,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 133,
+          "reranker_score": 0.0701562911272049
+        },
+        {
+          "rank": 8,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 18,
+          "reranker_score": 0.051159340888261795
+        },
+        {
+          "rank": 9,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 40,
+          "reranker_score": 0.03340490162372589
+        },
+        {
+          "rank": 10,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 40,
+          "reranker_score": 0.03212690353393555
+        }
+      ]
+    },
+    {
+      "id": "vm_001",
+      "question": "What is VMware vMotion?",
+      "expected_source": "vmware-vsphere-7-0.pdf",
+      "type": "Positive",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1743,
+          "reranker_score": 0.8917370438575745
+        },
+        {
+          "rank": 2,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1839,
+          "reranker_score": 0.8204689025878906
+        },
+        {
+          "rank": 3,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2174,
+          "reranker_score": 0.3298976719379425
+        },
+        {
+          "rank": 4,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2199,
+          "reranker_score": 0.31340354681015015
+        },
+        {
+          "rank": 5,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2513,
+          "reranker_score": 0.24245254695415497
+        },
+        {
+          "rank": 6,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2212,
+          "reranker_score": 0.18727457523345947
+        },
+        {
+          "rank": 7,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2221,
+          "reranker_score": 0.16817055642604828
+        },
+        {
+          "rank": 8,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2105,
+          "reranker_score": 0.16049742698669434
+        },
+        {
+          "rank": 9,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1877,
+          "reranker_score": 0.10756727308034897
+        },
+        {
+          "rank": 10,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1802,
+          "reranker_score": 0.05172595754265785
+        }
+      ]
+    },
+    {
+      "id": "vm_002",
+      "question": "What is a virtual machine snapshot in VMware?",
+      "expected_source": "vmware-vsphere-7-0.pdf",
+      "type": "Positive",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2067,
+          "reranker_score": 0.9575703144073486
+        },
+        {
+          "rank": 2,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3376,
+          "reranker_score": 0.9369816184043884
+        },
+        {
+          "rank": 3,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2613,
+          "reranker_score": 0.9138435125350952
+        },
+        {
+          "rank": 4,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2069,
+          "reranker_score": 0.8976905941963196
+        },
+        {
+          "rank": 5,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2072,
+          "reranker_score": 0.8763431310653687
+        },
+        {
+          "rank": 6,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2614,
+          "reranker_score": 0.8590136170387268
+        },
+        {
+          "rank": 7,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3380,
+          "reranker_score": 0.6563425660133362
+        },
+        {
+          "rank": 8,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3380,
+          "reranker_score": 0.6091732382774353
+        },
+        {
+          "rank": 9,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3381,
+          "reranker_score": 0.5454195737838745
+        },
+        {
+          "rank": 10,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2072,
+          "reranker_score": 0.5371807217597961
+        }
+      ]
+    },
+    {
+      "id": "vm_003",
+      "question": "What is vSphere HA?",
+      "expected_source": "vmware-vsphere-7-0.pdf",
+      "type": "Positive",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3088,
+          "reranker_score": 0.9670022130012512
+        },
+        {
+          "rank": 2,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3098,
+          "reranker_score": 0.8436084389686584
+        },
+        {
+          "rank": 3,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 625,
+          "reranker_score": 0.7301501631736755
+        },
+        {
+          "rank": 4,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 90,
+          "reranker_score": 0.615195095539093
+        },
+        {
+          "rank": 5,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 483,
+          "reranker_score": 0.5475472807884216
+        },
+        {
+          "rank": 6,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3103,
+          "reranker_score": 0.29467788338661194
+        },
+        {
+          "rank": 7,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3086,
+          "reranker_score": 0.25365573167800903
+        },
+        {
+          "rank": 8,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3100,
+          "reranker_score": 0.23270486295223236
+        },
+        {
+          "rank": 9,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 207,
+          "reranker_score": 0.07105501741170883
+        },
+        {
+          "rank": 10,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 919,
+          "reranker_score": 0.01116794254630804
+        }
+      ]
+    },
+    {
+      "id": "vm_004",
+      "question": "What is vSphere DRS?",
+      "expected_source": "vmware-vsphere-7-0.pdf",
+      "type": "Positive",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3035,
+          "reranker_score": 0.9978713989257812
+        },
+        {
+          "rank": 2,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3026,
+          "reranker_score": 0.9401953220367432
+        },
+        {
+          "rank": 3,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3032,
+          "reranker_score": 0.9400250911712646
+        },
+        {
+          "rank": 4,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3101,
+          "reranker_score": 0.9078102707862854
+        },
+        {
+          "rank": 5,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2975,
+          "reranker_score": 0.8653852939605713
+        },
+        {
+          "rank": 6,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3019,
+          "reranker_score": 0.7123529314994812
+        },
+        {
+          "rank": 7,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3443,
+          "reranker_score": 0.6963580250740051
+        },
+        {
+          "rank": 8,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3038,
+          "reranker_score": 0.5325746536254883
+        },
+        {
+          "rank": 9,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1994,
+          "reranker_score": 0.23306933045387268
+        },
+        {
+          "rank": 10,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3118,
+          "reranker_score": 0.2089555561542511
+        }
+      ]
+    },
+    {
+      "id": "vm_005",
+      "question": "What is an ESXi host?",
+      "expected_source": "vmware-vsphere-7-0.pdf",
+      "type": "Positive",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 978,
+          "reranker_score": 0.9959521293640137
+        },
+        {
+          "rank": 2,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2911,
+          "reranker_score": 0.9662038683891296
+        },
+        {
+          "rank": 3,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2992,
+          "reranker_score": 0.8821007609367371
+        },
+        {
+          "rank": 4,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3263,
+          "reranker_score": 0.669837236404419
+        },
+        {
+          "rank": 5,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 77,
+          "reranker_score": 0.46138492226600647
+        },
+        {
+          "rank": 6,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1320,
+          "reranker_score": 0.43146610260009766
+        },
+        {
+          "rank": 7,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2688,
+          "reranker_score": 0.38944727182388306
+        },
+        {
+          "rank": 8,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1085,
+          "reranker_score": 0.38134926557540894
+        },
+        {
+          "rank": 9,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1057,
+          "reranker_score": 0.3646634519100189
+        },
+        {
+          "rank": 10,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2835,
+          "reranker_score": 0.3292679488658905
+        }
+      ]
+    },
+    {
+      "id": "vm_006",
+      "question": "What is a vCenter Server?",
+      "expected_source": "vmware-vsphere-7-0.pdf",
+      "type": "Positive",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 978,
+          "reranker_score": 0.9990668892860413
+        },
+        {
+          "rank": 2,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1300,
+          "reranker_score": 0.9673519134521484
+        },
+        {
+          "rank": 3,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1159,
+          "reranker_score": 0.9593669772148132
+        },
+        {
+          "rank": 4,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1240,
+          "reranker_score": 0.9200521111488342
+        },
+        {
+          "rank": 5,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1315,
+          "reranker_score": 0.8773709535598755
+        },
+        {
+          "rank": 6,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1159,
+          "reranker_score": 0.6606743931770325
+        },
+        {
+          "rank": 7,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1068,
+          "reranker_score": 0.539003849029541
+        },
+        {
+          "rank": 8,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1736,
+          "reranker_score": 0.5260376930236816
+        },
+        {
+          "rank": 9,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1733,
+          "reranker_score": 0.25463443994522095
+        },
+        {
+          "rank": 10,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1300,
+          "reranker_score": 0.14226900041103363
+        }
+      ]
+    },
+    {
+      "id": "power_001",
+      "question": "What is a logical partition (LPAR) in IBM PowerVM?",
+      "expected_source": "IBM PowerVM.pdf",
+      "type": "Positive",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "IBM PowerVM.pdf",
+          "page": 30,
+          "reranker_score": 0.9866530299186707
+        },
+        {
+          "rank": 2,
+          "source": "IBM PowerVM.pdf",
+          "page": 156,
+          "reranker_score": 0.9751632809638977
+        },
+        {
+          "rank": 3,
+          "source": "IBM PowerVM.pdf",
+          "page": 195,
+          "reranker_score": 0.9481075406074524
+        },
+        {
+          "rank": 4,
+          "source": "IBM PowerVM.pdf",
+          "page": 47,
+          "reranker_score": 0.9468486905097961
+        },
+        {
+          "rank": 5,
+          "source": "IBM PowerVM.pdf",
+          "page": 93,
+          "reranker_score": 0.9229651689529419
+        },
+        {
+          "rank": 6,
+          "source": "IBM PowerVM.pdf",
+          "page": 48,
+          "reranker_score": 0.8952435851097107
+        },
+        {
+          "rank": 7,
+          "source": "IBM PowerVM.pdf",
+          "page": 173,
+          "reranker_score": 0.7453297972679138
+        },
+        {
+          "rank": 8,
+          "source": "IBM PowerVM.pdf",
+          "page": 229,
+          "reranker_score": 0.7187014222145081
+        },
+        {
+          "rank": 9,
+          "source": "IBM PowerVM.pdf",
+          "page": 162,
+          "reranker_score": 0.6438013911247253
+        },
+        {
+          "rank": 10,
+          "source": "IBM PowerVM.pdf",
+          "page": 41,
+          "reranker_score": 0.5760590434074402
+        }
+      ]
+    },
+    {
+      "id": "power_002",
+      "question": "What is PowerVM?",
+      "expected_source": "IBM PowerVM.pdf",
+      "type": "Positive",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "IBM PowerVM.pdf",
+          "page": 16,
+          "reranker_score": 0.9992356300354004
+        },
+        {
+          "rank": 2,
+          "source": "IBM PowerVM.pdf",
+          "page": 16,
+          "reranker_score": 0.9967319965362549
+        },
+        {
+          "rank": 3,
+          "source": "IBM PowerVM.pdf",
+          "page": 17,
+          "reranker_score": 0.8780757784843445
+        },
+        {
+          "rank": 4,
+          "source": "IBM PowerVM.pdf",
+          "page": 38,
+          "reranker_score": 0.557063102722168
+        },
+        {
+          "rank": 5,
+          "source": "IBM PowerVM.pdf",
+          "page": 233,
+          "reranker_score": 0.23436880111694336
+        },
+        {
+          "rank": 6,
+          "source": "IBM PowerVM.pdf",
+          "page": 195,
+          "reranker_score": 0.21070024371147156
+        },
+        {
+          "rank": 7,
+          "source": "IBM PowerVM.pdf",
+          "page": 19,
+          "reranker_score": 0.18516702950000763
+        },
+        {
+          "rank": 8,
+          "source": "IBM PowerVM.pdf",
+          "page": 43,
+          "reranker_score": 0.1763041466474533
+        },
+        {
+          "rank": 9,
+          "source": "IBM PowerVM.pdf",
+          "page": 5,
+          "reranker_score": 0.13021524250507355
+        },
+        {
+          "rank": 10,
+          "source": "IBM PowerVM.pdf",
+          "page": 5,
+          "reranker_score": 0.10400278121232986
+        }
+      ]
+    },
+    {
+      "id": "power_003",
+      "question": "What is a Virtual I/O Server (VIOS)?",
+      "expected_source": "IBM PowerVM.pdf",
+      "type": "Positive",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "IBM PowerVM.pdf",
+          "page": 25,
+          "reranker_score": 0.7380204796791077
+        },
+        {
+          "rank": 2,
+          "source": "IBM PowerVM.pdf",
+          "page": 18,
+          "reranker_score": 0.6398738026618958
+        },
+        {
+          "rank": 3,
+          "source": "IBM PowerVM.pdf",
+          "page": 222,
+          "reranker_score": 0.22251342236995697
+        },
+        {
+          "rank": 4,
+          "source": "IBM PowerVM.pdf",
+          "page": 25,
+          "reranker_score": 0.17195981740951538
+        },
+        {
+          "rank": 5,
+          "source": "IBM PowerVM.pdf",
+          "page": 112,
+          "reranker_score": 0.1388704478740692
+        },
+        {
+          "rank": 6,
+          "source": "IBM PowerVM.pdf",
+          "page": 201,
+          "reranker_score": 0.051765114068984985
+        },
+        {
+          "rank": 7,
+          "source": "IBM PowerVM.pdf",
+          "page": 158,
+          "reranker_score": 0.051167480647563934
+        },
+        {
+          "rank": 8,
+          "source": "IBM PowerVM.pdf",
+          "page": 6,
+          "reranker_score": 0.05093745142221451
+        },
+        {
+          "rank": 9,
+          "source": "IBM PowerVM.pdf",
+          "page": 123,
+          "reranker_score": 0.03639121726155281
+        },
+        {
+          "rank": 10,
+          "source": "IBM PowerVM.pdf",
+          "page": 152,
+          "reranker_score": 0.02269984595477581
+        }
+      ]
+    },
+    {
+      "id": "power_004",
+      "question": "What is dynamic LPAR?",
+      "expected_source": "IBM PowerVM.pdf",
+      "type": "Positive",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "IBM PowerVM.pdf",
+          "page": 211,
+          "reranker_score": 0.46464964747428894
+        },
+        {
+          "rank": 2,
+          "source": "IBM PowerVM.pdf",
+          "page": 50,
+          "reranker_score": 0.3702734708786011
+        },
+        {
+          "rank": 3,
+          "source": "IBM PowerVM.pdf",
+          "page": 105,
+          "reranker_score": 0.22350332140922546
+        },
+        {
+          "rank": 4,
+          "source": "IBM PowerVM.pdf",
+          "page": 29,
+          "reranker_score": 0.19047120213508606
+        },
+        {
+          "rank": 5,
+          "source": "IBM PowerVM.pdf",
+          "page": 29,
+          "reranker_score": 0.030765168368816376
+        },
+        {
+          "rank": 6,
+          "source": "IBM PowerVM.pdf",
+          "page": 105,
+          "reranker_score": 0.028408538550138474
+        },
+        {
+          "rank": 7,
+          "source": "IBM PowerVM.pdf",
+          "page": 215,
+          "reranker_score": 0.012492552399635315
+        },
+        {
+          "rank": 8,
+          "source": "IBM PowerVM.pdf",
+          "page": 148,
+          "reranker_score": 0.007605325896292925
+        },
+        {
+          "rank": 9,
+          "source": "IBM PowerVM.pdf",
+          "page": 8,
+          "reranker_score": 0.004953005351126194
+        },
+        {
+          "rank": 10,
+          "source": "IBM PowerVM.pdf",
+          "page": 211,
+          "reranker_score": 0.004528006538748741
+        }
+      ]
+    },
+    {
+      "id": "power_005",
+      "question": "What is an IBM Power Systems logical partition?",
+      "expected_source": "IBM PowerVM.pdf",
+      "type": "Positive",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "IBM PowerVM.pdf",
+          "page": 30,
+          "reranker_score": 0.7861571907997131
+        },
+        {
+          "rank": 2,
+          "source": "IBM PowerVM.pdf",
+          "page": 66,
+          "reranker_score": 0.17946067452430725
+        },
+        {
+          "rank": 3,
+          "source": "IBM PowerVM.pdf",
+          "page": 40,
+          "reranker_score": 0.13855896890163422
+        },
+        {
+          "rank": 4,
+          "source": "IBM PowerVM.pdf",
+          "page": 16,
+          "reranker_score": 0.10777146369218826
+        },
+        {
+          "rank": 5,
+          "source": "IBM PowerVM.pdf",
+          "page": 231,
+          "reranker_score": 0.03961008042097092
+        },
+        {
+          "rank": 6,
+          "source": "IBM PowerVM.pdf",
+          "page": 195,
+          "reranker_score": 0.03566386178135872
+        },
+        {
+          "rank": 7,
+          "source": "IBM PowerVM.pdf",
+          "page": 93,
+          "reranker_score": 0.021672707051038742
+        },
+        {
+          "rank": 8,
+          "source": "IBM PowerVM.pdf",
+          "page": 225,
+          "reranker_score": 0.021439047530293465
+        },
+        {
+          "rank": 9,
+          "source": "IBM PowerVM.pdf",
+          "page": 226,
+          "reranker_score": 0.005837657954543829
+        },
+        {
+          "rank": 10,
+          "source": "IBM PowerVM.pdf",
+          "page": 31,
+          "reranker_score": 0.004616094287484884
+        }
+      ]
+    },
+    {
+      "id": "win_001",
+      "question": "What is Windows Server?",
+      "expected_source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+      "type": "Positive",
+      "rank": 2,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 142,
+          "reranker_score": 0.1848115622997284
+        },
+        {
+          "rank": 2,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 8,
+          "reranker_score": 0.04845091700553894
+        },
+        {
+          "rank": 3,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 15,
+          "reranker_score": 0.01500843744724989
+        },
+        {
+          "rank": 4,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 25,
+          "reranker_score": 0.002771636238321662
+        },
+        {
+          "rank": 5,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 15,
+          "reranker_score": 0.0025077357422560453
+        },
+        {
+          "rank": 6,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 143,
+          "reranker_score": 0.0014883434632793069
+        },
+        {
+          "rank": 7,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 15,
+          "reranker_score": 0.001284404075704515
+        },
+        {
+          "rank": 8,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 151,
+          "reranker_score": 0.0009098778828047216
+        },
+        {
+          "rank": 9,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1881,
+          "reranker_score": 0.0008899312233552337
+        },
+        {
+          "rank": 10,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 8,
+          "reranker_score": 0.0007932157604955137
+        }
+      ]
+    },
+    {
+      "id": "win_002",
+      "question": "What is the purpose of Windows Server administration?",
+      "expected_source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+      "type": "Positive",
+      "rank": 9,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 135,
+          "reranker_score": 0.1692449152469635
+        },
+        {
+          "rank": 2,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 137,
+          "reranker_score": 0.026388954371213913
+        },
+        {
+          "rank": 3,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 14,
+          "reranker_score": 0.022786157205700874
+        },
+        {
+          "rank": 4,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 137,
+          "reranker_score": 0.01486137229949236
+        },
+        {
+          "rank": 5,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1736,
+          "reranker_score": 0.009212281554937363
+        },
+        {
+          "rank": 6,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 136,
+          "reranker_score": 0.004732288885861635
+        },
+        {
+          "rank": 7,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 10,
+          "reranker_score": 0.003268816275522113
+        },
+        {
+          "rank": 8,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 12,
+          "reranker_score": 0.0032524806447327137
+        },
+        {
+          "rank": 9,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 21,
+          "reranker_score": 0.0028952923603355885
+        },
+        {
+          "rank": 10,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 15,
+          "reranker_score": 0.0015434023225679994
+        }
+      ]
+    },
+    {
+      "id": "win_003",
+      "question": "What is Azure Stack?",
+      "expected_source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+      "type": "Positive",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 22,
+          "reranker_score": 0.03934278339147568
+        },
+        {
+          "rank": 2,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 1,
+          "reranker_score": 0.03845936432480812
+        },
+        {
+          "rank": 3,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 12,
+          "reranker_score": 0.021740686148405075
+        },
+        {
+          "rank": 4,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 9,
+          "reranker_score": 0.020352661609649658
+        },
+        {
+          "rank": 5,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 10,
+          "reranker_score": 0.014393600635230541
+        },
+        {
+          "rank": 6,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 15,
+          "reranker_score": 0.009231922216713428
+        },
+        {
+          "rank": 7,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 8,
+          "reranker_score": 0.007066002581268549
+        },
+        {
+          "rank": 8,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 12,
+          "reranker_score": 0.004487990867346525
+        },
+        {
+          "rank": 9,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 22,
+          "reranker_score": 0.003417493309825659
+        },
+        {
+          "rank": 10,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 8,
+          "reranker_score": 0.0015135406283661723
+        }
+      ]
+    },
+    {
+      "id": "win_004",
+      "question": "What is Windows Server management?",
+      "expected_source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+      "type": "Positive",
+      "rank": 2,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 142,
+          "reranker_score": 0.028328897431492805
+        },
+        {
+          "rank": 2,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 15,
+          "reranker_score": 0.01747359149158001
+        },
+        {
+          "rank": 3,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 14,
+          "reranker_score": 0.006544018164277077
+        },
+        {
+          "rank": 4,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 65,
+          "reranker_score": 0.003391536418348551
+        },
+        {
+          "rank": 5,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 137,
+          "reranker_score": 0.0017891607712954283
+        },
+        {
+          "rank": 6,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 620,
+          "reranker_score": 0.001485796645283699
+        },
+        {
+          "rank": 7,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 151,
+          "reranker_score": 0.0009441502625122666
+        },
+        {
+          "rank": 8,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 138,
+          "reranker_score": 0.0006837831460870802
+        },
+        {
+          "rank": 9,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2112,
+          "reranker_score": 0.00045603784383274615
+        },
+        {
+          "rank": 10,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 143,
+          "reranker_score": 0.00043070505489595234
+        }
+      ]
+    },
+    {
+      "id": "ms_001",
+      "question": "What is Microsoft server administration?",
+      "expected_source": "Microsoft.pdf",
+      "type": "Positive",
+      "rank": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1736,
+          "reranker_score": 0.01688447594642639
+        },
+        {
+          "rank": 2,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 15,
+          "reranker_score": 0.0033869717735797167
+        },
+        {
+          "rank": 3,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 15,
+          "reranker_score": 0.0031946341041475534
+        },
+        {
+          "rank": 4,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 8,
+          "reranker_score": 0.001913372310809791
+        },
+        {
+          "rank": 5,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 69,
+          "reranker_score": 0.0017235398991033435
+        },
+        {
+          "rank": 6,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 18,
+          "reranker_score": 0.0011503433343023062
+        },
+        {
+          "rank": 7,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 1,
+          "reranker_score": 0.0011014894116669893
+        },
+        {
+          "rank": 8,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 13,
+          "reranker_score": 0.0010510454885661602
+        },
+        {
+          "rank": 9,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 65,
+          "reranker_score": 0.0009741914109326899
+        },
+        {
+          "rank": 10,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2717,
+          "reranker_score": 0.0006242730305530131
+        }
+      ]
+    },
+    {
+      "id": "ms_002",
+      "question": "What are common Microsoft Windows server management tasks?",
+      "expected_source": "Microsoft.pdf",
+      "type": "Positive",
+      "rank": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 137,
+          "reranker_score": 0.7923135757446289
+        },
+        {
+          "rank": 2,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1737,
+          "reranker_score": 0.5777334570884705
+        },
+        {
+          "rank": 3,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 135,
+          "reranker_score": 0.49814626574516296
+        },
+        {
+          "rank": 4,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 14,
+          "reranker_score": 0.10908471047878265
+        },
+        {
+          "rank": 5,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 137,
+          "reranker_score": 0.021611804142594337
+        },
+        {
+          "rank": 6,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 72,
+          "reranker_score": 0.016773948445916176
+        },
+        {
+          "rank": 7,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 8,
+          "reranker_score": 0.014450963586568832
+        },
+        {
+          "rank": 8,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 9,
+          "reranker_score": 0.013201454654335976
+        },
+        {
+          "rank": 9,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 98,
+          "reranker_score": 0.011118044145405293
+        },
+        {
+          "rank": 10,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 149,
+          "reranker_score": 0.009064738638699055
+        }
+      ]
+    },
+    {
+      "id": "ms_003",
+      "question": "What is Windows system administration?",
+      "expected_source": "Microsoft.pdf",
+      "type": "Positive",
+      "rank": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 65,
+          "reranker_score": 0.02242942340672016
+        },
+        {
+          "rank": 2,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1117,
+          "reranker_score": 0.008271895349025726
+        },
+        {
+          "rank": 3,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 21,
+          "reranker_score": 0.0033602381590753794
+        },
+        {
+          "rank": 4,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 14,
+          "reranker_score": 0.003069879487156868
+        },
+        {
+          "rank": 5,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 138,
+          "reranker_score": 0.0020744898356497288
+        },
+        {
+          "rank": 6,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 7,
+          "reranker_score": 0.0013900547055527568
+        },
+        {
+          "rank": 7,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 137,
+          "reranker_score": 0.0010746113257482648
+        },
+        {
+          "rank": 8,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 16,
+          "reranker_score": 0.0005084581207484007
+        },
+        {
+          "rank": 9,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2112,
+          "reranker_score": 0.00042732906877063215
+        },
+        {
+          "rank": 10,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 15,
+          "reranker_score": 0.00040239605004899204
+        }
+      ]
+    },
+    {
+      "id": "neg_001",
+      "question": "What is the population of Japan?",
+      "expected_source": null,
+      "type": "Positive",
+      "rank": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 371,
+          "reranker_score": 0.8453751802444458
+        },
+        {
+          "rank": 2,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1588,
+          "reranker_score": 0.08302993327379227
+        },
+        {
+          "rank": 3,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3169,
+          "reranker_score": 0.033518221229314804
+        },
+        {
+          "rank": 4,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2421,
+          "reranker_score": 0.007267173379659653
+        },
+        {
+          "rank": 5,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 488,
+          "reranker_score": 0.0027840526308864355
+        },
+        {
+          "rank": 6,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2122,
+          "reranker_score": 0.002391206566244364
+        },
+        {
+          "rank": 7,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1287,
+          "reranker_score": 0.0021941671147942543
+        },
+        {
+          "rank": 8,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3051,
+          "reranker_score": 0.0019776939880102873
+        },
+        {
+          "rank": 9,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1350,
+          "reranker_score": 0.0009018011041916907
+        },
+        {
+          "rank": 10,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1296,
+          "reranker_score": 0.0008657066500745714
+        }
+      ]
+    },
+    {
+      "id": "neg_002",
+      "question": "Who won the FIFA World Cup in 2022?",
+      "expected_source": null,
+      "type": "Positive",
+      "rank": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2122,
+          "reranker_score": 0.012395383790135384
+        },
+        {
+          "rank": 2,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1995,
+          "reranker_score": 0.0024310643784701824
+        },
+        {
+          "rank": 3,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3182,
+          "reranker_score": 0.0017199567519128323
+        },
+        {
+          "rank": 4,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 224,
+          "reranker_score": 0.0013894281582906842
+        },
+        {
+          "rank": 5,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1512,
+          "reranker_score": 0.0010663743596524
+        },
+        {
+          "rank": 6,
+          "source": "aLG-821512-001_secured.pdf",
+          "page": 3,
+          "reranker_score": 0.0009126102086156607
+        },
+        {
+          "rank": 7,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 423,
+          "reranker_score": 0.0006890222430229187
+        },
+        {
+          "rank": 8,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 329,
+          "reranker_score": 0.0006824557203799486
+        },
+        {
+          "rank": 9,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1795,
+          "reranker_score": 0.00018558390729594976
+        },
+        {
+          "rank": 10,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1519,
+          "reranker_score": 0.00013066672545392066
+        }
+      ]
+    },
+    {
+      "id": "neg_003",
+      "question": "What is the capital of France?",
+      "expected_source": null,
+      "type": "Positive",
+      "rank": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1521,
+          "reranker_score": 0.0002671440888661891
+        },
+        {
+          "rank": 2,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 899,
+          "reranker_score": 0.00025342346634715796
+        },
+        {
+          "rank": 3,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1547,
+          "reranker_score": 0.00014525506412610412
+        },
+        {
+          "rank": 4,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 807,
+          "reranker_score": 7.476376777049154e-05
+        },
+        {
+          "rank": 5,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1521,
+          "reranker_score": 4.206028825137764e-05
+        },
+        {
+          "rank": 6,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 651,
+          "reranker_score": 3.844107413897291e-05
+        },
+        {
+          "rank": 7,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 595,
+          "reranker_score": 3.781947089009918e-05
+        },
+        {
+          "rank": 8,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1881,
+          "reranker_score": 3.7445774069055915e-05
+        },
+        {
+          "rank": 9,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2992,
+          "reranker_score": 3.744024070329033e-05
+        },
+        {
+          "rank": 10,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2112,
+          "reranker_score": 3.743577690329403e-05
+        }
+      ]
+    }
+  ]
+}

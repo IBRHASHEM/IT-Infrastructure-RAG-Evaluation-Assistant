@@ -1,7 +1,7 @@
 from pathlib import Path
 from typing import List, Dict
 
-from pypdf import PdfReader
+import pymupdf
 
 
 class DocumentLoader:
@@ -25,15 +25,15 @@ class DocumentLoader:
             print(f"\nLoading {pdf_file.name}")
 
             try:
-                reader = PdfReader(pdf_file)
+                pdf = pymupdf.open(pdf_file)
 
-                print(f"Pages: {len(reader.pages)}")
+                print(f"Pages: {len(pdf)}")
 
                 extracted = 0
 
-                for page_number, page in enumerate(reader.pages, start=1):
+                for page_number, page in enumerate(pdf, start=1):
 
-                    text = page.extract_text()
+                    text = page.get_text("text").strip()
 
                     if not text:
                         continue
@@ -47,6 +47,8 @@ class DocumentLoader:
                     )
 
                     extracted += 1
+
+                pdf.close()
 
                 print(f"Extracted {extracted} pages")
 

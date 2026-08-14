@@ -1,0 +1,132 @@
+[
+  {
+    "id": "ad_001",
+    "question": "What is an authoritative restore of SYSVOL?",
+    "expected_source": "active_directory_operation_guide_part_1.pdf"
+  },
+  {
+    "id": "ad_002",
+    "question": "What is a non-authoritative restore of SYSVOL?",
+    "expected_source": "active_directory_operation_guide_part_1.pdf"
+  },
+  {
+    "id": "ad_003",
+    "question": "What is the purpose of Active Directory replication?",
+    "expected_source": "active_directory_operation_guide_part_1.pdf"
+  },
+  {
+    "id": "ad_004",
+    "question": "What is a domain controller?",
+    "expected_source": "active_directory_operation_guide_part_1.pdf"
+  },
+  {
+    "id": "ad_005",
+    "question": "What is Active Directory Domain Services?",
+    "expected_source": "active_directory_operation_guide_part_1.pdf"
+  },
+  {
+    "id": "vm_001",
+    "question": "What is VMware vMotion?",
+    "expected_source": "vmware-vsphere-7-0.pdf"
+  },
+  {
+    "id": "vm_002",
+    "question": "What is a virtual machine snapshot in VMware?",
+    "expected_source": "vmware-vsphere-7-0.pdf"
+  },
+  {
+    "id": "vm_003",
+    "question": "What is vSphere HA?",
+    "expected_source": "vmware-vsphere-7-0.pdf"
+  },
+  {
+    "id": "vm_004",
+    "question": "What is vSphere DRS?",
+    "expected_source": "vmware-vsphere-7-0.pdf"
+  },
+  {
+    "id": "vm_005",
+    "question": "What is an ESXi host?",
+    "expected_source": "vmware-vsphere-7-0.pdf"
+  },
+  {
+    "id": "vm_006",
+    "question": "What is a vCenter Server?",
+    "expected_source": "vmware-vsphere-7-0.pdf"
+  },
+  {
+    "id": "power_001",
+    "question": "What is a logical partition (LPAR) in IBM PowerVM?",
+    "expected_source": "IBM PowerVM.pdf"
+  },
+  {
+    "id": "power_002",
+    "question": "What is PowerVM?",
+    "expected_source": "IBM PowerVM.pdf"
+  },
+  {
+    "id": "power_003",
+    "question": "What is a Virtual I/O Server (VIOS)?",
+    "expected_source": "IBM PowerVM.pdf"
+  },
+  {
+    "id": "power_004",
+    "question": "What is dynamic LPAR?",
+    "expected_source": "IBM PowerVM.pdf"
+  },
+  {
+    "id": "power_005",
+    "question": "What is an IBM Power Systems logical partition?",
+    "expected_source": "IBM PowerVM.pdf"
+  },
+  {
+    "id": "win_001",
+    "question": "What is Windows Server?",
+    "expected_source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf"
+  },
+  {
+    "id": "win_002",
+    "question": "What is the purpose of Windows Server administration?",
+    "expected_source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf"
+  },
+  {
+    "id": "win_003",
+    "question": "What is Azure Stack?",
+    "expected_source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf"
+  },
+  {
+    "id": "win_004",
+    "question": "What is Windows Server management?",
+    "expected_source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf"
+  },
+  {
+    "id": "ms_001",
+    "question": "What is Microsoft server administration?",
+    "expected_source": "Microsoft.pdf"
+  },
+  {
+    "id": "ms_002",
+    "question": "What are common Microsoft Windows server management tasks?",
+    "expected_source": "Microsoft.pdf"
+  },
+  {
+    "id": "ms_003",
+    "question": "What is Windows system administration?",
+    "expected_source": "Microsoft.pdf"
+  },
+  {
+    "id": "neg_001",
+    "question": "What is the population of Japan?",
+    "expected_source": null
+  },
+  {
+    "id": "neg_002",
+    "question": "Who won the FIFA World Cup in 2022?",
+    "expected_source": null
+  },
+  {
+    "id": "neg_003",
+    "question": "What is the capital of France?",
+    "expected_source": null
+  }
+]
