@@ -1,0 +1,727 @@
+{
+  "method": "hybrid",
+  "top_k": 10,
+  "metrics": {
+    "hit_at_1": 0.6153846153846154,
+    "hit_at_3": 0.8846153846153846,
+    "hit_at_5": 0.8846153846153846,
+    "hit_at_10": 0.8846153846153846,
+    "mrr": 0.75
+  },
+  "results": [
+    {
+      "id": "ad_001",
+      "question": "What is an authoritative restore of SYSVOL?",
+      "expected_source": "active_directory_operation_guide_part_1.pdf",
+      "type": "Positive",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 27,
+          "score": 2.1452640043608917
+        },
+        {
+          "rank": 2,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 937,
+          "score": 0.32493019662788836
+        }
+      ]
+    },
+    {
+      "id": "ad_002",
+      "question": "What is a non-authoritative restore of SYSVOL?",
+      "expected_source": "active_directory_operation_guide_part_1.pdf",
+      "type": "Positive",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 27,
+          "score": 2.0051955852440484
+        },
+        {
+          "rank": 2,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2813,
+          "score": 0.46499861574473134
+        }
+      ]
+    },
+    {
+      "id": "ad_003",
+      "question": "What is the purpose of Active Directory replication?",
+      "expected_source": "active_directory_operation_guide_part_1.pdf",
+      "type": "Positive",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 166,
+          "score": 2.188647970304617
+        },
+        {
+          "rank": 2,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1408,
+          "score": 0.2815462306841617
+        }
+      ]
+    },
+    {
+      "id": "ad_004",
+      "question": "What is a domain controller?",
+      "expected_source": "active_directory_operation_guide_part_1.pdf",
+      "type": "Positive",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 69,
+          "score": 1.9240720433410874
+        },
+        {
+          "rank": 2,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2698,
+          "score": 0.4664191225875137
+        },
+        {
+          "rank": 3,
+          "source": "IBM PowerVM.pdf",
+          "page": 135,
+          "score": 0.038461538461538464
+        },
+        {
+          "rank": 4,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 68,
+          "score": 0.020833333333333332
+        }
+      ]
+    },
+    {
+      "id": "ad_005",
+      "question": "What is Active Directory Domain Services?",
+      "expected_source": "active_directory_operation_guide_part_1.pdf",
+      "type": "Positive",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 10,
+          "score": 2.0976478984971942
+        },
+        {
+          "rank": 2,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2751,
+          "score": 0.37254630249158505
+        }
+      ]
+    },
+    {
+      "id": "vm_001",
+      "question": "What is VMware vMotion?",
+      "expected_source": "vmware-vsphere-7-0.pdf",
+      "type": "Positive",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1743,
+          "score": 2.338174852174334
+        },
+        {
+          "rank": 2,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 83,
+          "score": 0.07024501634243836
+        },
+        {
+          "rank": 3,
+          "source": "IBM PowerVM.pdf",
+          "page": 222,
+          "score": 0.06177433247200689
+        }
+      ]
+    },
+    {
+      "id": "vm_002",
+      "question": "What is a virtual machine snapshot in VMware?",
+      "expected_source": "vmware-vsphere-7-0.pdf",
+      "type": "Positive",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3376,
+          "score": 2.470194200988779
+        }
+      ]
+    },
+    {
+      "id": "vm_003",
+      "question": "What is vSphere HA?",
+      "expected_source": "vmware-vsphere-7-0.pdf",
+      "type": "Positive",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3086,
+          "score": 2.36086255435163
+        },
+        {
+          "rank": 2,
+          "source": "IBM PowerVM.pdf",
+          "page": 222,
+          "score": 0.05849673202614379
+        },
+        {
+          "rank": 3,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 83,
+          "score": 0.0508349146110057
+        }
+      ]
+    },
+    {
+      "id": "vm_004",
+      "question": "What is vSphere DRS?",
+      "expected_source": "vmware-vsphere-7-0.pdf",
+      "type": "Positive",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3038,
+          "score": 2.36086255435163
+        },
+        {
+          "rank": 2,
+          "source": "IBM PowerVM.pdf",
+          "page": 222,
+          "score": 0.05849673202614379
+        },
+        {
+          "rank": 3,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 83,
+          "score": 0.0508349146110057
+        }
+      ]
+    },
+    {
+      "id": "vm_005",
+      "question": "What is an ESXi host?",
+      "expected_source": "vmware-vsphere-7-0.pdf",
+      "type": "Positive",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3263,
+          "score": 2.418862764064122
+        },
+        {
+          "rank": 2,
+          "source": "IBM PowerVM.pdf",
+          "page": 222,
+          "score": 0.05133143692465726
+        }
+      ]
+    },
+    {
+      "id": "vm_006",
+      "question": "What is a vCenter Server?",
+      "expected_source": "vmware-vsphere-7-0.pdf",
+      "type": "Positive",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1260,
+          "score": 2.4140353271828467
+        },
+        {
+          "rank": 2,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 151,
+          "score": 0.03393665158371041
+        },
+        {
+          "rank": 3,
+          "source": "IBM PowerVM.pdf",
+          "page": 108,
+          "score": 0.022222222222222223
+        }
+      ]
+    },
+    {
+      "id": "power_001",
+      "question": "What is a logical partition (LPAR) in IBM PowerVM?",
+      "expected_source": "IBM PowerVM.pdf",
+      "type": "Positive",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "IBM PowerVM.pdf",
+          "page": 156,
+          "score": 2.370380931584827
+        },
+        {
+          "rank": 2,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2672,
+          "score": 0.09981326940395271
+        }
+      ]
+    },
+    {
+      "id": "power_002",
+      "question": "What is PowerVM?",
+      "expected_source": "IBM PowerVM.pdf",
+      "type": "Positive",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "IBM PowerVM.pdf",
+          "page": 90,
+          "score": 1.2475093914990922
+        },
+        {
+          "rank": 2,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2971,
+          "score": 1.1506779525204247
+        },
+        {
+          "rank": 3,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 83,
+          "score": 0.07200685696926298
+        }
+      ]
+    },
+    {
+      "id": "power_003",
+      "question": "What is a Virtual I/O Server (VIOS)?",
+      "expected_source": "IBM PowerVM.pdf",
+      "type": "Positive",
+      "rank": 2,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2992,
+          "score": 1.3155331416222042
+        },
+        {
+          "rank": 2,
+          "source": "IBM PowerVM.pdf",
+          "page": 25,
+          "score": 1.1368039165094324
+        },
+        {
+          "rank": 3,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 151,
+          "score": 0.017857142857142856
+        }
+      ]
+    },
+    {
+      "id": "power_004",
+      "question": "What is dynamic LPAR?",
+      "expected_source": "IBM PowerVM.pdf",
+      "type": "Positive",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "IBM PowerVM.pdf",
+          "page": 211,
+          "score": 1.2547295956587998
+        },
+        {
+          "rank": 2,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2971,
+          "score": 1.1860528406240978
+        },
+        {
+          "rank": 3,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 156,
+          "score": 0.029411764705882353
+        }
+      ]
+    },
+    {
+      "id": "power_005",
+      "question": "What is an IBM Power Systems logical partition?",
+      "expected_source": "IBM PowerVM.pdf",
+      "type": "Positive",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "IBM PowerVM.pdf",
+          "page": 30,
+          "score": 2.4361393669339453
+        },
+        {
+          "rank": 2,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2971,
+          "score": 0.03405483405483405
+        }
+      ]
+    },
+    {
+      "id": "win_001",
+      "question": "What is Windows Server?",
+      "expected_source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+      "type": "Positive",
+      "rank": 2,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2971,
+          "score": 0.9445769134901347
+        },
+        {
+          "rank": 2,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 15,
+          "score": 0.6411823767613105
+        },
+        {
+          "rank": 3,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 142,
+          "score": 0.2512181803507612
+        },
+        {
+          "rank": 4,
+          "source": "IBM PowerVM.pdf",
+          "page": 222,
+          "score": 0.03708791208791209
+        }
+      ]
+    },
+    {
+      "id": "win_002",
+      "question": "What is the purpose of Windows Server administration?",
+      "expected_source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+      "type": "Positive",
+      "rank": 2,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1881,
+          "score": 0.7106376809929341
+        },
+        {
+          "rank": 2,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 18,
+          "score": 0.6091677270081509
+        },
+        {
+          "rank": 3,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 136,
+          "score": 0.5172577450214382
+        },
+        {
+          "rank": 4,
+          "source": "IBM PowerVM.pdf",
+          "page": 217,
+          "score": 0.02702702702702703
+        }
+      ]
+    },
+    {
+      "id": "win_003",
+      "question": "What is Azure Stack?",
+      "expected_source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+      "type": "Positive",
+      "rank": 2,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2971,
+          "score": 0.9748467313134538
+        },
+        {
+          "rank": 2,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 8,
+          "score": 0.7345668512642611
+        },
+        {
+          "rank": 3,
+          "source": "IBM PowerVM.pdf",
+          "page": 153,
+          "score": 0.05007688828584351
+        }
+      ]
+    },
+    {
+      "id": "win_004",
+      "question": "What is Windows Server management?",
+      "expected_source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+      "type": "Positive",
+      "rank": 2,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1552,
+          "score": 0.8530036221347507
+        },
+        {
+          "rank": 2,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 15,
+          "score": 0.5199655860975538
+        },
+        {
+          "rank": 3,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 151,
+          "score": 0.3752537544992737
+        },
+        {
+          "rank": 4,
+          "source": "IBM PowerVM.pdf",
+          "page": 217,
+          "score": 0.2140053539146155
+        }
+      ]
+    },
+    {
+      "id": "ms_001",
+      "question": "What is Microsoft server administration?",
+      "expected_source": "Microsoft.pdf",
+      "type": "Positive",
+      "rank": 2,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1736,
+          "score": 1.0820997346111976
+        },
+        {
+          "rank": 2,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 15,
+          "score": 0.6141002276743683
+        },
+        {
+          "rank": 3,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 88,
+          "score": 0.15182348270591167
+        },
+        {
+          "rank": 4,
+          "source": "IBM PowerVM.pdf",
+          "page": 222,
+          "score": 0.02564102564102564
+        }
+      ]
+    },
+    {
+      "id": "ms_002",
+      "question": "What are common Microsoft Windows server management tasks?",
+      "expected_source": "Microsoft.pdf",
+      "type": "Positive",
+      "rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 1,
+          "score": 0.7098756897267442
+        },
+        {
+          "rank": 2,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 138,
+          "score": 0.6687769391590461
+        },
+        {
+          "rank": 3,
+          "source": "IBM PowerVM.pdf",
+          "page": 197,
+          "score": 0.2368357096406316
+        },
+        {
+          "rank": 4,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1375,
+          "score": 0.16202950840594904
+        }
+      ]
+    },
+    {
+      "id": "ms_003",
+      "question": "What is Windows system administration?",
+      "expected_source": "Microsoft.pdf",
+      "type": "Positive",
+      "rank": 2,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 2971,
+          "score": 0.7611290187690335
+        },
+        {
+          "rank": 2,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 65,
+          "score": 0.6820791419493456
+        },
+        {
+          "rank": 3,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 138,
+          "score": 0.323136679249217
+        },
+        {
+          "rank": 4,
+          "source": "IBM PowerVM.pdf",
+          "page": 199,
+          "score": 0.02702702702702703
+        }
+      ]
+    },
+    {
+      "id": "neg_001",
+      "question": "What is the population of Japan?",
+      "expected_source": null,
+      "type": "Positive",
+      "rank": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 1200,
+          "score": 2.114856895509932
+        },
+        {
+          "rank": 2,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 60,
+          "score": 0.18264056856691507
+        },
+        {
+          "rank": 3,
+          "source": "IBM PowerVM.pdf",
+          "page": 108,
+          "score": 0.08379040514845693
+        },
+        {
+          "rank": 4,
+          "source": "aLG-821512-001_secured.pdf",
+          "page": 61,
+          "score": 0.03826530612244898
+        },
+        {
+          "rank": 5,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 7,
+          "score": 0.02564102564102564
+        }
+      ]
+    },
+    {
+      "id": "neg_002",
+      "question": "Who won the FIFA World Cup in 2022?",
+      "expected_source": null,
+      "type": "Positive",
+      "rank": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 3182,
+          "score": 1.984341544980834
+        },
+        {
+          "rank": 2,
+          "source": "aLG-821512-001_secured.pdf",
+          "page": 61,
+          "score": 0.3076208141893822
+        },
+        {
+          "rank": 3,
+          "source": "Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf",
+          "page": 13,
+          "score": 0.06203007518796992
+        },
+        {
+          "rank": 4,
+          "source": "IBM PowerVM.pdf",
+          "page": 40,
+          "score": 0.04020496649586125
+        },
+        {
+          "rank": 5,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 2,
+          "score": 0.015873015873015872
+        }
+      ]
+    },
+    {
+      "id": "neg_003",
+      "question": "What is the capital of France?",
+      "expected_source": null,
+      "type": "Positive",
+      "rank": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "vmware-vsphere-7-0.pdf",
+          "page": 311,
+          "score": 2.371009441978792
+        },
+        {
+          "rank": 2,
+          "source": "active_directory_operation_guide_part_1.pdf",
+          "page": 153,
+          "score": 0.06124149659863945
+        },
+        {
+          "rank": 3,
+          "source": "IBM PowerVM.pdf",
+          "page": 199,
+          "score": 0.03794326241134752
+        }
+      ]
+    }
+  ]
+}
