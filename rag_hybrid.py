@@ -1,5 +1,4 @@
 from hybrid_search import HybridSearch
-from reranker import DocumentReranker
 from qwen_generator import QwenGenerator
 
 
@@ -14,13 +13,10 @@ class HybridRAG:
         self.searcher = HybridSearch(
             vector_k=50,
             bm25_k=50,
-            final_k=10
+            final_k=5
         )
 
-        # Cross-encoder reranker
-        self.reranker = DocumentReranker()
-
-        # Local Qwen 3B generation model
+        # Local Qwen 2.5 3B generation model
         self.generator = QwenGenerator()
 
         print("Hybrid RAG initialized successfully.")
@@ -29,35 +25,14 @@ class HybridRAG:
     # Search
     # -------------------------------------------------
 
-    def search(self, question: str, top_k: int = 3):
+    def search(self, question: str, top_k: int = 5):
 
-        # First stage: Hybrid retrieval
-        hybrid_results = self.searcher.search(question)
+        results = self.searcher.search(question)
 
-        if not hybrid_results:
+        if not results:
             return []
 
-        print("=" * 80)
-        print("Hybrid Candidates")
-        print("=" * 80)
-
-        for result in hybrid_results:
-
-            print(
-                f"{result['rank']}. "
-                f"{result['source']} "
-                f"(Page {result['page']}) "
-                f"RRF={result['score']:.6f}"
-            )
-
-        # Second stage: Cross-encoder reranking
-        reranked_results = self.reranker.rerank(
-            question,
-            hybrid_results,
-            top_k=top_k
-        )
-
-        return reranked_results
+        return results[:top_k]
 
     # -------------------------------------------------
     # Ask
@@ -67,10 +42,9 @@ class HybridRAG:
 
         results = self.search(
             question,
-            top_k=3
+            top_k=5
         )
 
-        # No results
         if not results:
 
             return {
@@ -78,12 +52,8 @@ class HybridRAG:
                 "sources": []
             }
 
-        # -------------------------------------------------
-        # Reranked documents
-        # -------------------------------------------------
-
         print("=" * 80)
-        print("Reranked Documents")
+        print("Retrieved Documents")
         print("=" * 80)
 
         for result in results:
@@ -92,7 +62,6 @@ class HybridRAG:
                 f"{result['rank']}. "
                 f"{result['source']} "
                 f"(Page {result['page']}) "
-                f"Reranker={result['reranker_score']:.6f} "
                 f"RRF={result['score']:.6f}"
             )
 
@@ -154,7 +123,7 @@ class HybridRAG:
 if __name__ == "__main__":
 
     print("=" * 80)
-    print("HYBRID RAG + RERANKER TEST")
+    print("HYBRID RAG TEST")
     print("=" * 80)
 
     rag = HybridRAG()
