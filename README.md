@@ -50,7 +50,15 @@ Monitoring Metrics
 ## 🏗️ Architecture
 
 ![Architecture](screenshots/architecture.png)
-
+## 🖥️ Application Interface
+![Streamlit UI](screenshots/streamlit-ui.png)
+## 💬 Question & Answer
+![Question Answer 1](screenshots/question_answer1.png)
+![Question Answer 2](screenshots/question_answer2.png)
+## 📊 Monitoring
+![Monitoring](screenshots/Monitoring.png)
+## 📈 Retrieval Evaluation
+![Evaluation](screenshots/evaluation.png)
 ### Main Components
 
 | Component         | Technology                   |
