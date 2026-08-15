@@ -1,110 +1,241 @@
-import streamlit as st
-from config import MODEL_NAME, EMBEDDING_MODEL
-from vector_store import VectorStore
-from rag import RAG
 import os
-pdf_count = len([
-    f for f in os.listdir("data")
-    if f.endswith(".pdf")
-])
+import time
+
+import streamlit as st
+
+from config import MODEL_NAME, EMBEDDING_MODEL_PATH
+from vector_store import VectorStore
+from rag_hybrid import HybridRAG
+
+
+# =========================================================
+# PAGE CONFIGURATION
+# =========================================================
+
 st.set_page_config(
-    page_title="IT Infrastructure Assistant",
+    page_title="IT Servers Support Assistant",
     page_icon="💻",
-    layout="wide"
+    layout="wide",
+    initial_sidebar_state="expanded",
 )
 
-assistant = RAG()
-vector_db = VectorStore()
 
-#=======================
-# ======================================
-# Sidebar
-# ======================================
+# =========================================================
+# DOCUMENT COUNT
+# =========================================================
+
+pdf_count = len(
+    [
+        f
+        for f in os.listdir("data")
+        if f.lower().endswith(".pdf")
+    ]
+)
+
+
+# =========================================================
+# LOAD RAG
+# =========================================================
+
+@st.cache_resource
+def load_rag():
+    return HybridRAG()
+
+
+@st.cache_resource
+def load_vector_store():
+    return VectorStore()
+
+
+assistant = load_rag()
+vector_db = load_vector_store()
+
+
+# =========================================================
+# SIDEBAR
+# =========================================================
 
 with st.sidebar:
 
-    st.title("💻 IT Infrastructure Assistant\nEnterprise RAG System")
+    st.title("💻 IT Servers Support Assistant")
+
+    st.caption("Enterprise RAG System")
 
     st.divider()
 
-    st.subheader("🤖 Model")
-    st.code(MODEL_NAME)
+    # -----------------------------------------------------
+    # Generation Model
+    # -----------------------------------------------------
 
-    st.subheader("🧠 Embeddings")
-    st.caption(EMBEDDING_MODEL)
+    st.subheader("🤖 Generation Model")
+
+    st.code(
+        MODEL_NAME,
+        language="text"
+    )
+
+    # -----------------------------------------------------
+    # Embedding Model
+    # -----------------------------------------------------
+
+    st.subheader("🧠 Embedding Model")
+
+    st.code(
+        EMBEDDING_MODEL_PATH,
+        language="text"
+    )
 
     st.divider()
+
+    # -----------------------------------------------------
+    # Knowledge Base Statistics
+    # -----------------------------------------------------
+
+    st.subheader("📊 Knowledge Base")
 
     try:
-
-        collection = vector_db.collection
-
-        chunks = collection.count()
-
-    except:
-
+        chunks = vector_db.collection.count()
+    except Exception:
         chunks = "Unknown"
 
-    st.metric(
-        "🧩 Indexed Chunks",
-        chunks
-    )
+    col1, col2 = st.columns(2)
 
-    st.metric(
-        "📄 Documents",
-        pdf_count
+    with col1:
+        st.metric(
+            "🧩 Chunks",
+            chunks
+        )
 
+    with col2:
+        st.metric(
+            "📄 PDFs",
+            pdf_count
+        )
+
+    st.divider()
+
+    # -----------------------------------------------------
+    # Retrieval Architecture
+    # -----------------------------------------------------
+
+    st.subheader("🔎 Retrieval")
+
+    st.caption(
+        "Vector Search + BM25 + RRF"
     )
 
     st.divider()
 
-    if st.button("🗑️ Clear Chat"):
+    # -----------------------------------------------------
+    # System Status
+    # -----------------------------------------------------
 
+    st.subheader("🟢 System")
+
+    st.caption("RAG: Ready")
+    st.caption("Vector DB: ChromaDB")
+    st.caption("Embeddings: Local BGE")
+    st.caption("Generator: Local Qwen")
+
+    st.divider()
+
+    # -----------------------------------------------------
+    # Clear Chat
+    # -----------------------------------------------------
+
+    if st.button(
+        "🗑️ Clear Chat",
+        use_container_width=True
+    ):
         st.session_state.messages = []
-
         st.rerun()
 
     st.divider()
 
-    st.caption("IT Infrastructure Assistant")
+    st.caption(
+        "Local BGE + ChromaDB + BM25 + RRF + Local Qwen"
+    )
 
-    st.caption("RAG + ChromaDB + Gemini")
-# -------------------------
-# Chat History
-# -------------------------
+
+# =========================================================
+# CHAT HISTORY
+# =========================================================
+
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
-st.title("💻 IT Infrastructure Assistant")
-st.markdown("Ask questions about your indexed IT documentation.")
 
-# -------------------------
-# Display previous messages
-# -------------------------
+# =========================================================
+# MAIN PAGE
+# =========================================================
+
+st.title(
+    "💻 IT Servers Support Assistant"
+)
+
+st.markdown(
+    "Ask questions about your indexed IT infrastructure documentation."
+)
+
+
+# =========================================================
+# DISPLAY CHAT HISTORY
+# =========================================================
+
 for message in st.session_state.messages:
 
-    with st.chat_message(message["role"]):
+    with st.chat_message(
+        message["role"]
+    ):
 
-        st.markdown(message["content"])
+        st.markdown(
+            message["content"]
+        )
 
-        if message["role"] == "assistant" and "sources" in message:
+        if (
+            message["role"] == "assistant"
+            and message.get("sources")
+        ):
 
-            with st.expander("Sources"):
+            with st.expander("📚 Sources"):
 
-                for s in message["sources"]:
+                for source in message["sources"]:
 
                     st.write(
-                        f"📄 {s['source']} (Page {s['page']})"
+                        f"📄 {source['source']} "
+                        f"(Page {source['page']})"
                     )
 
-# -------------------------
-# User Input
-# -------------------------
-question = st.chat_input("Ask your question...")
+        # -------------------------------------------------
+        # Performance Information
+        # -------------------------------------------------
+
+        if (
+            message["role"] == "assistant"
+            and message.get("elapsed_time") is not None
+        ):
+
+            st.caption(
+                f"⏱️ Response time: "
+                f"{message['elapsed_time']:.2f} seconds"
+            )
+
+
+# =========================================================
+# USER INPUT
+# =========================================================
+
+question = st.chat_input(
+    "Ask your question..."
+)
+
 
 if question:
 
-    # Show user message
+    # -----------------------------------------------------
+    # User message
+    # -----------------------------------------------------
+
     st.session_state.messages.append(
         {
             "role": "user",
@@ -115,28 +246,94 @@ if question:
     with st.chat_message("user"):
         st.markdown(question)
 
-    # Assistant
+    # -----------------------------------------------------
+    # RAG
+    # -----------------------------------------------------
+
     with st.chat_message("assistant"):
 
-        with st.spinner("Searching documentation..."):
+        start_time = time.perf_counter()
 
-            result = assistant.ask(question)
+        with st.spinner(
+            "Searching documentation and generating answer..."
+        ):
 
-        st.markdown(result["answer"])
+            try:
 
-        with st.expander("Sources"):
-
-            for s in result["sources"]:
-
-                st.write(
-                    f"📄 {s['source']} (Page {s['page']})"
+                result = assistant.ask(
+                    question
                 )
 
-    # Save history
+                elapsed_time = (
+                    time.perf_counter()
+                    - start_time
+                )
+
+                answer = result.get(
+                    "answer",
+                    "I don't know based on the indexed documentation."
+                )
+
+                sources = result.get(
+                    "sources",
+                    []
+                )
+
+                st.markdown(answer)
+
+                # -------------------------------------------------
+                # Sources
+                # -------------------------------------------------
+
+                if sources:
+
+                    with st.expander(
+                        "📚 Sources"
+                    ):
+
+                        for source in sources:
+
+                            st.write(
+                                f"📄 {source['source']} "
+                                f"(Page {source['page']})"
+                            )
+
+                # -------------------------------------------------
+                # Performance
+                # -------------------------------------------------
+
+                st.caption(
+                    f"⏱️ Response time: "
+                    f"{elapsed_time:.2f} seconds"
+                )
+
+            except Exception as e:
+
+                elapsed_time = (
+                    time.perf_counter()
+                    - start_time
+                )
+
+                answer = (
+                    "An error occurred while processing "
+                    "your question."
+                )
+
+                sources = []
+
+                st.error(
+                    f"Error: {e}"
+                )
+
+    # -----------------------------------------------------
+    # Save assistant message
+    # -----------------------------------------------------
+
     st.session_state.messages.append(
         {
             "role": "assistant",
-            "content": result["answer"],
-            "sources": result["sources"]
+            "content": answer,
+            "sources": sources,
+            "elapsed_time": elapsed_time,
         }
     )

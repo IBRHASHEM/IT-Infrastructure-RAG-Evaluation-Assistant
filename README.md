@@ -1,143 +1,89 @@
 # 💻 IT Infrastructure RAG Evaluation Assistant
 
-A local **Retrieval-Augmented Generation (RAG)** system for answering IT infrastructure and server administration questions from a technical documentation knowledge base.
+An enterprise-style **Retrieval-Augmented Generation (RAG)** assistant for answering IT infrastructure and server administration questions using a local knowledge base.
 
-The project combines **local BGE embeddings**, **ChromaDB**, **BM25**, **Reciprocal Rank Fusion (RRF)**, and a **local Qwen2.5-0.5B-Instruct** model.
-
-The system also includes **retrieval evaluation** and **runtime monitoring** to measure the performance of the RAG pipeline.
+The system combines **semantic vector search**, **BM25 keyword retrieval**, and **Reciprocal Rank Fusion (RRF)** to improve document retrieval quality before generating answers with a local **Qwen2.5-0.5B-Instruct** model.
 
 ---
 
-## 🎯 Project Goal
+## 📌 Project Overview
 
-The goal of this project is to build and evaluate a practical RAG system specialized in IT infrastructure documentation.
+The goal of this project is to build a practical RAG system that can answer questions about IT infrastructure documentation, including:
 
-Instead of relying only on an LLM's internal knowledge, the system retrieves relevant information from indexed technical documents and passes the retrieved context to a local language model.
+* VMware vSphere
+* Windows Server
+* Active Directory
+* IBM PowerVM / VIOS
+* Server administration
+* Virtualization
+* Infrastructure operations
 
-The project focuses on two important RAG components:
-
-1. **Retrieval quality**
-2. **Answer generation**
-
----
-
-# 🏗️ System Architecture
+The complete pipeline runs locally:
 
 ```text
-                         User Question
-                              │
-                              ▼
-                     ┌─────────────────┐
-                     │   Streamlit UI  │
-                     └────────┬────────┘
-                              │
-                              ▼
-                     ┌─────────────────┐
-                     │    Hybrid RAG   │
-                     └────────┬────────┘
-                              │
-               ┌──────────────┴──────────────┐
-               │                             │
-               ▼                             ▼
-       ┌───────────────┐             ┌───────────────┐
-       │ Vector Search │             │  BM25 Search  │
-       │     BGE       │             │   Keyword     │
-       └───────┬───────┘             └───────┬───────┘
-               │                             │
-               └──────────────┬──────────────┘
-                              │
-                              ▼
-                     ┌─────────────────┐
-                     │      RRF        │
-                     │ Rank Fusion     │
-                     └────────┬────────┘
-                              │
-                              ▼
-                     Retrieved Context
-                              │
-                              ▼
-                     ┌─────────────────┐
-                     │ Local Qwen LLM  │
-                     │ Qwen2.5-0.5B    │
-                     └────────┬────────┘
-                              │
-                              ▼
-                       Final Answer
-                              │
-                       ┌──────┴──────┐
-                       ▼             ▼
-                    Sources       Metrics
+User Question
+      │
+      ▼
+Hybrid Retrieval
+      │
+      ├── Vector Search
+      │
+      ├── BM25 Search
+      │
+      └── RRF Fusion
+      │
+      ▼
+Relevant Documentation
+      │
+      ▼
+Local Qwen Generator
+      │
+      ▼
+Grounded Answer + Sources
+      │
+      ▼
+Monitoring Metrics
 ```
 
 ---
 
-# 🔎 RAG Pipeline
+## 🏗️ Architecture
 
-The system follows this pipeline:
+![Architecture](screenshots/architecture.png)
 
-```text
-PDF Documents
-      │
-      ▼
-Document Loading
-      │
-      ▼
-Text Extraction
-      │
-      ▼
-Chunking
-      │
-      ▼
-BGE Embeddings
-      │
-      ▼
-ChromaDB
-      │
-      ├───────────────┐
-      ▼               ▼
- Vector Search      BM25
-      │               │
-      └───────┬───────┘
-              ▼
-             RRF
-              │
-              ▼
-       Relevant Chunks
-              │
-              ▼
-        Local Qwen
-              │
-              ▼
-        Final Answer
-```
+### Main Components
+
+| Component         | Technology                   |
+| ----------------- | ---------------------------- |
+| UI                | Streamlit                    |
+| Generation Model  | Qwen2.5-0.5B-Instruct        |
+| Embedding Model   | BAAI BGE-small-en-v1.5       |
+| Vector Database   | ChromaDB                     |
+| Keyword Retrieval | BM25                         |
+| Hybrid Fusion     | Reciprocal Rank Fusion (RRF) |
+| PDF Processing    | PyMuPDF / pypdf              |
+| Language          | Python                       |
+| Runtime           | Local Windows Environment    |
 
 ---
 
-# 🧠 Models
+## 🤖 Models
 
-## Generation Model
-
-The current generation model is:
+### Generation Model
 
 ```text
 Qwen2.5-0.5B-Instruct
 ```
 
-Local model path:
+The model is loaded completely locally from:
 
 ```text
 D:\Models\Qwen2.5-0.5B-Instruct
 ```
 
-The model is loaded locally using Hugging Face Transformers.
+The generator is configured to answer using the retrieved documentation rather than relying on external knowledge.
 
-No external LLM API is required for the current generation pipeline.
-
----
-
-## Embedding Model
-
-The current embedding model is:
+### Embedding Model
 
 ```text
 BAAI/bge-small-en-v1.5
@@ -149,189 +95,144 @@ Local model path:
 D:\Models\bge-small-en-v1.5
 ```
 
-The embedding model is used to create semantic representations of the documentation and user questions.
+The embedding model is used for semantic vector retrieval.
 
 ---
 
-# 🗄️ Vector Database
+## 🔎 Hybrid Retrieval
 
-The project uses:
+The project implements a hybrid retrieval architecture combining two retrieval methods.
 
-```text
-ChromaDB
-```
+### 1. Vector Search
 
-Configuration:
+The question is converted into an embedding using the local BGE model.
 
-```python
-CHROMA_PATH = "chroma_db"
+ChromaDB is then used to retrieve semantically similar document chunks.
 
-COLLECTION_NAME = "it_infrastructure"
-```
+### 2. BM25
 
-The current ChromaDB installation used during testing contained:
+BM25 provides keyword-based retrieval.
 
-```text
-7,294 indexed chunks/documents
-```
+This is useful for infrastructure terminology, commands, product names, acronyms, and exact technical terms.
 
----
-
-# 🔀 Hybrid Retrieval
-
-The project combines two retrieval techniques.
-
-## Vector Search
-
-BGE embeddings are used to perform semantic similarity search.
-
-This allows the system to retrieve content that is conceptually related to the question even when the exact wording differs.
-
----
-
-## BM25
-
-BM25 provides lexical keyword retrieval.
-
-This is useful for technical terms such as:
+Examples:
 
 ```text
-vSphere
 vMotion
+vSphere HA
 SYSVOL
 VIOS
-Active Directory
-Windows Server
 DHCP
+Active Directory
 ```
 
----
+### 3. Reciprocal Rank Fusion
 
-## Reciprocal Rank Fusion
-
-The vector and BM25 result lists are combined using **Reciprocal Rank Fusion (RRF)**.
-
-The retrieval architecture is:
+The vector and BM25 rankings are combined using RRF.
 
 ```text
 Vector Search
       +
 BM25 Search
-      ↓
+      │
+      ▼
      RRF
-      ↓
-Combined Ranking
+      │
+      ▼
+Final Ranked Results
 ```
 
-Current hybrid-search configuration:
+This allows the system to benefit from both semantic similarity and exact keyword matching.
+
+---
+
+## 📚 Knowledge Base
+
+The knowledge base contains IT infrastructure documentation covering multiple technologies.
+
+Examples include:
+
+* VMware vSphere 7.0
+* Microsoft Windows / Windows Server
+* Active Directory
+* IBM PowerVM
+* Azure Stack
+* Server administration documentation
+
+The documents are converted into text, divided into chunks, embedded, and stored in ChromaDB.
+
+---
+
+## 🧩 Vector Database
+
+The project uses **ChromaDB** as the local vector database.
+
+Configuration:
 
 ```python
-vector_k = 50
-bm25_k = 50
-final_k = 5
+CHROMA_PATH = "chroma_db"
+COLLECTION_NAME = "it_infrastructure"
 ```
+
+The current indexed database contains approximately:
+
+```text
+7294 indexed chunks
+```
+
+The exact number may change after rebuilding the index.
 
 ---
 
-# 📚 Knowledge Base
+## 🧠 RAG Pipeline
 
-The project uses technical PDF documentation as its knowledge base.
+The main RAG workflow is:
 
-The indexed documentation covers areas including:
+### Step 1 — User Question
 
-* VMware vSphere
-* VMware vMotion
-* VMware vSphere HA
-* Microsoft Windows Server
-* Windows administration
-* Active Directory
-* SYSVOL
-* IBM PowerVM
-* Virtual I/O Server (VIOS)
-
-Example documents include:
+Example:
 
 ```text
-active_directory_operation_guide_part_1.pdf
-
-IBM PowerVM.pdf
-
-Microsoft Windows, Windows Server, Azure Stack Administrative Guide (22H2).pdf
-
-Microsoft.pdf
-
-vmware-vsphere-7-0.pdf
+What is VMware vMotion?
 ```
 
----
+### Step 2 — Hybrid Retrieval
 
-# 📊 Retrieval Evaluation
-
-A dedicated evaluation script is included to compare:
+The system retrieves candidate chunks using:
 
 ```text
-Vector Retrieval
-        vs
-Hybrid Retrieval
+Vector Search
++
+BM25
++
+RRF
 ```
 
-The evaluation uses:
+### Step 3 — Candidate Filtering
 
-* Hit@1
-* Hit@3
-* Hit@5
-* Hit@10
-* MRR
+The retrieved candidates are filtered and ranked before being passed to the generator.
 
----
+### Step 4 — Context Construction
 
-## Final Retrieval Results
-
-The final evaluation produced:
-
-| Metric | Vector |     Hybrid |  Difference |
-| ------ | -----: | ---------: | ----------: |
-| Hit@1  | 60.87% |     60.87% |      +0.00% |
-| Hit@3  | 65.22% | **73.91%** |  **+8.70%** |
-| Hit@5  | 69.57% | **73.91%** |  **+4.35%** |
-| Hit@10 | 73.91% |     73.91% |      +0.00% |
-| MRR    | 0.6467 | **0.6667** | **+0.0199** |
-
-### Evaluation Result
+Relevant document chunks are combined into a context containing:
 
 ```text
-WINNER: Hybrid Retrieval
+Source
+Page
+Content
 ```
 
-The largest improvement was observed at **Hit@3**:
+### Step 5 — Local Generation
 
-```text
-Vector : 65.22%
+Qwen generates an answer using the retrieved documentation.
 
-Hybrid : 73.91%
+### Step 6 — Sources
 
-Gain   : +8.70%
-```
+The application displays the document and page used for the answer.
 
-MRR also improved:
+### Step 7 — Monitoring
 
-```text
-Vector : 0.6467
-
-Hybrid : 0.6667
-
-Gain   : +0.0199
-```
-
-These results indicate that the hybrid approach improved the ranking of relevant documents in the evaluation dataset.
-
----
-
-# ⏱️ Runtime Monitoring
-
-The RAG pipeline includes runtime monitoring.
-
-The following metrics are measured:
+The system records:
 
 * Retrieval time
 * Generation time
@@ -339,6 +240,12 @@ The following metrics are measured:
 * Candidate chunks
 * Retrieved chunks
 * Unique sources
+
+---
+
+## 📊 Monitoring
+
+The RAG pipeline includes basic performance monitoring.
 
 Example:
 
@@ -355,160 +262,132 @@ Unique sources : 5
 ================================================================================
 ```
 
-The metrics are also returned from:
+The monitoring information helps identify the main performance bottleneck.
 
-```python
-HybridRAG.ask()
+In the local setup, retrieval is generally fast while text generation is the dominant part of the response time.
+
+---
+
+## 📈 Retrieval Evaluation
+
+The project evaluates the retrieval system by comparing:
+
+```text
+Vector Retrieval
+vs.
+Hybrid Retrieval
 ```
 
-Example:
+The evaluation uses:
 
-```python
-{
-    "retrieval_time": 0.08,
-    "generation_time": 6.82,
-    "total_time": 6.89,
-    "candidate_chunks": 10,
-    "retrieved_chunks": 5,
-    "unique_sources": 5
-}
+* Hit@1
+* Hit@3
+* Hit@5
+* Hit@10
+* MRR
+
+### Final Results
+
+| Metric | Vector Baseline | Hybrid RRF |  Difference |
+| ------ | --------------: | ---------: | ----------: |
+| Hit@1  |          60.87% |     60.87% |      +0.00% |
+| Hit@3  |          65.22% | **73.91%** |  **+8.70%** |
+| Hit@5  |          69.57% | **73.91%** |  **+4.35%** |
+| Hit@10 |          73.91% |     73.91% |      +0.00% |
+| MRR    |          0.6467 | **0.6667** | **+0.0199** |
+
+### Evaluation Conclusion
+
+The **Hybrid RRF retriever** performed better overall.
+
+The main improvements were:
+
+* Higher Hit@3
+* Higher Hit@5
+* Higher MRR
+* Better ranking quality in the top results
+
+The largest improvement was:
+
+```text
+Hit@3: +8.70 percentage points
+```
+
+Detailed evaluation results are stored in:
+
+```text
+retrieval_evaluation.json
 ```
 
 ---
 
-# ⚡ Performance Observation
+## 📸 Evaluation
 
-The monitoring results show a significant difference between retrieval and generation latency.
-
-Typical observed values:
-
-```text
-Retrieval:
-~0.08 - 0.20 seconds
-
-Generation:
-~6 - 8+ seconds
-```
-
-Therefore, in the current local configuration:
-
-```text
-Retrieval = Fast
-
-Generation = Main latency bottleneck
-```
-
-The generation latency is primarily related to running the local Qwen model in the current environment.
+![Retrieval Evaluation](screenshots/evaluation.png)
 
 ---
 
-# 🛡️ Grounded Generation
+## 🖥️ Application Interface
 
-The Qwen generator uses a documentation-focused prompt.
+The project provides a Streamlit interface for interacting with the RAG system.
 
-The model is instructed to:
-
-```text
-1. Answer only from the provided documentation.
-2. Do not use general knowledge.
-3. Do not guess.
-4. Do not invent definitions.
-5. Do not add unsupported information.
-6. Ignore irrelevant documents.
-7. Keep the answer concise.
-8. Return an "I don't know" response when the documentation
-   does not support the answer.
-```
-
-The intended fallback response is:
-
-```text
-I don't know based on the indexed documentation.
-```
-
----
-
-# 🖥️ Streamlit Application
-
-The project includes a Streamlit interface.
-
-Run the application with:
-
-```powershell
-python -m streamlit run app.py
-```
+![Application Dashboard](screenshots/dashboard.png)
 
 The interface displays:
 
-* Application name
 * Generation model
 * Embedding model
+* Knowledge-base statistics
 * Number of indexed chunks
 * Number of PDF documents
 * Retrieval architecture
-* Chat history
+* Chat interface
 * Retrieved sources
-* Source pages
-* Runtime information
+* Response time
 
 ---
 
-# 📁 Project Structure
+## 📂 Project Structure
 
 ```text
 IT-Infrastructure-RAG-Evaluation-Assistant/
-│
-├── app.py
-├── config.py
-│
-├── rag_hybrid.py
-├── hybrid_search.py
-├── vector_store.py
-│
-├── qwen_generator.py
-├── gemini_generator.py
-│
-├── embeddings.py
-├── document_loader.py
-├── chunker.py
-│
-├── build_index.py
-├── evaluate_retrieval.py
-├── test_rag.py
-├── test_batch.py
-│
-├── retrieval_evaluation.json
 │
 ├── data/
 │   └── *.pdf
 │
 ├── chroma_db/
+│   └── ChromaDB files
 │
+├── screenshots/
+│   ├── architecture.png
+│   ├── dashboard.png
+│   └── evaluation.png
+│
+├── app.py
+├── rag_hybrid.py
+├── hybrid_search.py
+├── vector_store.py
+├── qwen_generator.py
+├── gemini_generator.py
+├── embeddings.py
+├── document_loader.py
+├── chunker.py
+├── build_index.py
+├── evaluate_retrieval.py
+├── test_rag.py
+├── config.py
+├── retrieval_evaluation.json
 ├── requirements.txt
-│
 └── README.md
 ```
 
 ---
 
-# ⚙️ Configuration
+## ⚙️ Configuration
 
-The main configuration is located in:
-
-```text
-config.py
-```
-
-Current configuration:
+The main configuration is stored in `config.py`.
 
 ```python
-import os
-
-from dotenv import load_dotenv
-
-load_dotenv()
-
-
 MODEL_NAME = r"D:\Models\Qwen2.5-0.5B-Instruct"
 
 EMBEDDING_MODEL_PATH = r"D:\Models\bge-small-en-v1.5"
@@ -518,23 +397,34 @@ CHROMA_PATH = "chroma_db"
 COLLECTION_NAME = "it_infrastructure"
 ```
 
+Update the model paths if the models are stored in a different location.
+
 ---
 
-# 🚀 Installation
+## 🚀 Installation
 
-## 1. Create Virtual Environment
+### 1. Clone the repository
+
+```bash
+git clone <YOUR_GITHUB_REPOSITORY_URL>
+cd IT-Infrastructure-RAG-Evaluation-Assistant
+```
+
+### 2. Create a virtual environment
+
+Windows PowerShell:
 
 ```powershell
 python -m venv .venv
 ```
 
-## 2. Activate Environment
+Activate it:
 
 ```powershell
 .\.venv\Scripts\Activate.ps1
 ```
 
-## 3. Install Dependencies
+### 3. Install dependencies
 
 ```powershell
 pip install -r requirements.txt
@@ -542,9 +432,9 @@ pip install -r requirements.txt
 
 ---
 
-# 📥 Build the Knowledge Base
+## 📥 Build the Index
 
-Place the PDF documents inside:
+Place the PDF documentation inside:
 
 ```text
 data/
@@ -556,73 +446,23 @@ Then run:
 python build_index.py
 ```
 
-The indexing process performs:
+The indexing process:
 
 ```text
-PDF
- ↓
-Text Extraction
- ↓
-Chunking
- ↓
-Embedding
- ↓
-ChromaDB
+Load PDFs
+   ↓
+Extract text
+   ↓
+Chunk documents
+   ↓
+Generate BGE embeddings
+   ↓
+Store vectors in ChromaDB
 ```
 
 ---
 
-# 🔍 Test Hybrid Search
-
-To test retrieval independently:
-
-```powershell
-python -c "from hybrid_search import HybridSearch; h=HybridSearch(); print(h.search('What is vSphere HA?')[:5])"
-```
-
----
-
-# 🤖 Test Complete RAG
-
-Run:
-
-```powershell
-python rag_hybrid.py
-```
-
-The test currently includes questions such as:
-
-```text
-What is vSphere HA?
-
-What is VMware vMotion?
-
-What is Windows Server management?
-
-What is an authoritative restore of SYSVOL?
-
-What is a Virtual I/O Server (VIOS)?
-```
-
----
-
-# 🧪 Evaluate Retrieval
-
-Run the retrieval evaluation:
-
-```powershell
-python evaluate_retrieval.py
-```
-
-The evaluation compares vector retrieval with hybrid retrieval and saves the results to:
-
-```text
-retrieval_evaluation.json
-```
-
----
-
-# 🌐 Run the Web Application
+## ▶️ Run the Application
 
 Start Streamlit:
 
@@ -630,13 +470,27 @@ Start Streamlit:
 python -m streamlit run app.py
 ```
 
-The application can then be used to ask questions against the indexed IT documentation.
+Then open the local Streamlit URL shown in the terminal.
 
 ---
 
-# 📝 Example Questions
+## 🧪 Test the RAG Pipeline
 
-## VMware
+Run:
+
+```powershell
+python rag_hybrid.py
+```
+
+The test executes several infrastructure questions and displays:
+
+* Retrieved documents
+* RRF scores
+* Generated answer
+* Sources
+* Monitoring metrics
+
+Example questions:
 
 ```text
 What is vSphere HA?
@@ -646,23 +500,13 @@ What is vSphere HA?
 What is VMware vMotion?
 ```
 
-## Microsoft Windows
-
 ```text
 What is Windows Server management?
 ```
 
 ```text
-What is Windows system administration?
-```
-
-## Active Directory
-
-```text
 What is an authoritative restore of SYSVOL?
 ```
-
-## IBM PowerVM
 
 ```text
 What is a Virtual I/O Server (VIOS)?
@@ -670,249 +514,186 @@ What is a Virtual I/O Server (VIOS)?
 
 ---
 
-# 📖 Example RAG Flow
+## 📊 Run Retrieval Evaluation
 
-For a question such as:
+Run:
 
-```text
-What is an authoritative restore of SYSVOL?
+```powershell
+python evaluate_retrieval.py
 ```
 
-the system retrieves relevant Active Directory documentation.
+The evaluation compares the baseline vector retriever against the hybrid retriever.
 
-The observed retrieval results included:
-
-```text
-active_directory_operation_guide_part_1.pdf
-Page 27
-Page 32
-Page 34
-```
-
-For:
+The results are saved to:
 
 ```text
-What is a Virtual I/O Server (VIOS)?
-```
-
-the retrieval system identified:
-
-```text
-IBM PowerVM.pdf
-```
-
-with multiple relevant pages.
-
-This demonstrates that the retrieval system can identify documentation specific to different infrastructure domains.
-
----
-
-# ⚠️ Current Limitations
-
-The project currently uses:
-
-```text
-Qwen2.5-0.5B-Instruct
-```
-
-The model is intentionally small enough to run locally on the current environment.
-
-Because it is a small local language model, generation quality can still be limited.
-
-Possible issues include:
-
-* Incorrect interpretation of technical terminology
-* Unsupported statements
-* Incorrect abbreviation expansion
-* Repetition
-* Incomplete answers
-* Combining information from unrelated context
-
-Therefore, retrieval quality and generation quality are evaluated separately.
-
----
-
-# 🔬 Retrieval vs Generation
-
-A key design principle of this project is separating retrieval evaluation from generation evaluation.
-
-## Retrieval
-
-Retrieval asks:
-
-> Did the system retrieve the correct documentation?
-
-This is measured using:
-
-```text
-Hit@1
-Hit@3
-Hit@5
-Hit@10
-MRR
-```
-
-## Generation
-
-Generation asks:
-
-> Did the LLM produce an accurate answer from the retrieved evidence?
-
-The current project has focused strongly on improving and measuring retrieval, while using a lightweight local model for generation.
-
----
-
-# 🔐 Local Architecture
-
-The current configuration is designed around local execution:
-
-```text
-                    Local Environment
-                           │
-             ┌─────────────┴─────────────┐
-             │                           │
-             ▼                           ▼
-       Local BGE Model             Local Qwen Model
-             │                           ▲
-             ▼                           │
-          ChromaDB                       │
-             │                           │
-             ▼                           │
-        Vector Search                    │
-             │                           │
-             ├────── BM25 ──────┐        │
-             │                  │        │
-             └────── RRF ───────┘        │
-                        │                │
-                        └────────────────┘
-```
-
-No cloud LLM is required for the current generation pipeline.
-
----
-
-# 🛠️ Technologies
-
-| Technology             | Role                      |
-| ---------------------- | ------------------------- |
-| Python                 | Application development   |
-| Streamlit              | User interface            |
-| PyTorch                | Local model execution     |
-| Transformers           | LLM loading and inference |
-| Qwen2.5-0.5B-Instruct  | Text generation           |
-| BGE-small-en-v1.5      | Embeddings                |
-| ChromaDB               | Vector database           |
-| BM25                   | Keyword retrieval         |
-| RRF                    | Rank fusion               |
-| PyPDF / PDF processing | Document ingestion        |
-
----
-
-# 📌 Project Status
-
-## Completed
-
-* [x] PDF document ingestion
-* [x] Text extraction
-* [x] Document chunking
-* [x] Local BGE embeddings
-* [x] ChromaDB vector database
-* [x] Vector search
-* [x] BM25 search
-* [x] Hybrid retrieval
-* [x] Reciprocal Rank Fusion
-* [x] Retrieval evaluation
-* [x] Hit@K metrics
-* [x] MRR metric
-* [x] Local Qwen generation
-* [x] Source attribution
-* [x] Runtime monitoring
-* [x] Streamlit interface
-* [x] Local-only architecture
-* [x] Vector vs Hybrid comparison
-
----
-
-# 🔮 Future Improvements
-
-Potential improvements include:
-
-* Better relevance filtering before generation
-* Better duplicate chunk removal
-* Improved top-k selection
-* Answer faithfulness evaluation
-* Automated generation evaluation
-* GPU acceleration
-* Improved local inference performance
-* Better monitoring dashboard
-* Persistent evaluation history
-* More comprehensive test questions
-* Improved handling of unrelated retrieved documents
-
----
-
-# 🎓 LLM Zoomcamp 2026
-
-This project was developed as part of the **LLM Zoomcamp 2026** learning project.
-
-The project applies RAG concepts to a practical IT infrastructure use case and focuses on:
-
-```text
-Document Retrieval
-        +
-Hybrid Search
-        +
-RAG
-        +
-LLM Generation
-        +
-Evaluation
-        +
-Monitoring
+retrieval_evaluation.json
 ```
 
 ---
 
-# 🏁 Conclusion
+## 🛡️ Grounded Generation
 
-The **IT Infrastructure RAG Evaluation Assistant** demonstrates a complete local RAG pipeline for technical IT documentation.
+The generator is configured with strict RAG instructions.
 
-The final architecture combines:
-
-```text
-Local BGE
-    +
-ChromaDB
-    +
-BM25
-    +
-RRF
-    +
-Local Qwen
-    +
-Streamlit
-    +
-Evaluation
-    +
-Monitoring
-```
-
-The retrieval evaluation demonstrates that the hybrid retrieval approach outperformed vector retrieval on the evaluated dataset:
+The intended behavior is:
 
 ```text
-Hybrid Hit@3 : 73.91%
-Hybrid MRR   : 0.6667
+Documentation
+     ↓
+Retrieved Context
+     ↓
+Qwen
+     ↓
+Grounded Answer
 ```
 
-The project therefore provides both:
+The model is instructed to:
 
-1. A working IT documentation assistant.
-2. A measurable framework for evaluating and improving RAG retrieval performance.
+* Use the provided documentation
+* Avoid unsupported information
+* Avoid guessing
+* Avoid inventing technical details
+* Ignore irrelevant retrieved documents
+* Return an explicit fallback when the documentation does not support an answer
+
+Fallback response:
+
+```text
+I don't know based on the indexed documentation.
+```
 
 ---
 
-## 👨‍💻 Project Name
+## ⏱️ Performance
+
+The project separates retrieval and generation timing.
+
+Example local execution:
+
+```text
+Retrieval time : ~0.08s
+Generation time: ~6.82s
+Total time     : ~6.89s
+```
+
+Performance depends on:
+
+* CPU
+* Available RAM
+* Context size
+* Number of generated tokens
+* Qwen model size
+* Number of retrieved chunks
+
+Because the generator runs locally on CPU, generation is significantly slower than retrieval.
+
+---
+
+## 🔬 Design Decisions
+
+### Why BGE?
+
+A local BGE embedding model provides semantic retrieval without requiring an external embedding API.
+
+### Why BM25?
+
+Technical documentation contains many exact terms and acronyms. BM25 provides strong keyword matching alongside semantic retrieval.
+
+### Why RRF?
+
+RRF provides a simple way to combine rankings from different retrieval systems without requiring the scores from both systems to be directly comparable.
+
+### Why Qwen?
+
+Qwen2.5-0.5B-Instruct is small enough to run locally on a limited-resource machine while providing an instruction-following generation model.
+
+### Why Local Execution?
+
+The final implementation avoids dependence on external LLM inference for the main RAG pipeline.
+
+This provides:
+
+* Local execution
+* No per-query API cost
+* Better control over documentation
+* Reproducible experiments
+* Offline-capable inference after models and dependencies are installed
+
+---
+
+## 📌 Current System Status
+
+```text
+✅ PDF document ingestion
+✅ Document chunking
+✅ Local BGE embeddings
+✅ ChromaDB vector storage
+✅ Vector retrieval
+✅ BM25 retrieval
+✅ Hybrid RRF retrieval
+✅ Candidate filtering
+✅ Local Qwen generation
+✅ Source attribution
+✅ Streamlit interface
+✅ Response-time monitoring
+✅ Retrieval evaluation
+✅ Baseline vs Hybrid comparison
+```
+
+---
+
+## 🎯 Final Result
+
+The project demonstrates a complete local RAG pipeline for IT infrastructure documentation:
+
+```text
+                 ┌─────────────────────┐
+                 │    IT Documents     │
+                 │       PDFs          │
+                 └──────────┬──────────┘
+                            │
+                            ▼
+                 ┌─────────────────────┐
+                 │  Document Processing│
+                 │  Chunking + BGE     │
+                 └──────────┬──────────┘
+                            │
+                            ▼
+                    ┌───────────────┐
+                    │   ChromaDB    │
+                    └───────┬───────┘
+                            │
+User Question ──────────────┤
+                            │
+             ┌──────────────┴──────────────┐
+             │                             │
+             ▼                             ▼
+      Vector Search                     BM25
+             │                             │
+             └──────────────┬──────────────┘
+                            ▼
+                       RRF Fusion
+                            │
+                            ▼
+                    Relevant Context
+                            │
+                            ▼
+                 Qwen2.5-0.5B-Instruct
+                            │
+                            ▼
+                 Grounded Answer + Sources
+                            │
+                            ▼
+                       Monitoring
+```
+
+---
+
+## 👨‍💻 Project
 
 **IT Infrastructure RAG Evaluation Assistant**
 
-**LLM Zoomcamp 2026 Project**
+Built as a practical RAG project for the **LLM Zoomcamp 2026**.
+
+The project focuses on building, evaluating, and monitoring a production-style retrieval pipeline for enterprise IT documentation.

@@ -101,11 +101,17 @@ class RAG:
 
         sources = []
 
-        for meta in results["metadatas"][0]:
+        for i, meta in enumerate(results["metadatas"][0]):
+
+            distance = results["distances"][0][i] if "distances" in results and len(results["distances"][0]) > i else 0.0
 
             item = {
                 "source": meta["source"],
-                "page": meta["page"]
+                "page": meta["page"],
+                "text": results["documents"][0][i] if "documents" in results and len(results["documents"][0]) > i else "",
+                "score": float(distance),
+                "vector_rank": i + 1,
+                "bm25_rank": None
             }
 
             if item not in sources:
