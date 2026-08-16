@@ -1,94 +1,48 @@
 import json
 
 from evaluation.evaluator import Evaluator
-
-from assistant import GeminiAssistant
+from rag_hybrid import HybridRAG
 
 
 def main():
 
-
-    with open(
-        "evaluation/dataset.json"
-    ) as file:
-
+    with open("evaluation/dataset.json", encoding="utf-8") as file:
         dataset = json.load(file)
 
-
-
     evaluator = Evaluator()
-    assistant = GeminiAssistant()
+    assistant = HybridRAG()
 
     scores = []
 
-
     for item in dataset:
 
+        print("\n" + "=" * 80)
+        print("Question:", item["question"])
 
-        print("\n================")
-
-        print(
-            "Question:",
-            item["question"]
-        )
-
-        response = assistant.ask(
-        item["question"]
-            )
+        response = assistant.ask(item["question"])
 
         answer = response["answer"]
 
-
-        print(
-                "\nAnswer:",
-                answer[:300]
-            )
-
-        print(
-            "\nResponse Type:",
-            type(answer)
-        )
-
-        print(
-            "\nFull Response:",
-            answer
-        )
-        print(
-        "\nAnswer:",
-            answer[:300]
-        )
-
+        print("\nAnswer:")
+        print(answer)
 
         result = evaluator.evaluate(
             answer,
             item["expected_keywords"]
         )
 
-
-        print(
-            "\nEvaluation:",
-            result
-        )
-
+        print("\nEvaluation:")
+        print(result)
 
         scores.append(
             result["final_score"]
         )
 
-
-
-    print(
-        "\n================"
-    )
-
+    print("\n" + "=" * 80)
     print(
         "Average Score:",
-        round(
-            sum(scores)/len(scores),
-            2
-        )
+        round(sum(scores) / len(scores), 2)
     )
-
 
 
 if __name__ == "__main__":
