@@ -410,7 +410,18 @@ Update the model paths if the models are stored in a different location.
 ---
 
 ## 🚀 Installation
+### Requirements
 
+- Windows 10/11
+- Python 3.12+
+- Git
+- Sufficient RAM for the local Qwen model
+- Local BGE embedding model
+- Local Qwen2.5-0.5B-Instruct model
+
+The project is designed to run locally.
+No Docker is required.
+No external LLM API is required for the main RAG pipeline.
 ### 1. Clone the repository
 
 ```bash

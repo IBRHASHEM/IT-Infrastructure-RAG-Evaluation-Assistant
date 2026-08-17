@@ -1,29 +1,47 @@
 [
   {
-    "question": "How to install Active Directory?",
-    "ground_truth": "Install AD DS role, configure DNS, and promote server to domain controller.",
+    "question": "What is vSphere HA?",
+    "ground_truth": "vSphere HA provides high availability for virtual machines in a vSphere cluster.",
     "expected_keywords": [
-      "AD DS",
-      "DNS",
-      "Domain Controller"
+      "vSphere HA",
+      "virtual machines",
+      "cluster"
     ]
   },
   {
     "question": "What is VMware vMotion?",
-    "ground_truth": "vMotion migrates running virtual machines between ESXi hosts without downtime.",
+    "ground_truth": "vMotion allows virtual machines to be migrated between hosts.",
     "expected_keywords": [
-      "VM",
-      "ESXi",
+      "vMotion",
+      "virtual machines",
       "migration"
     ]
   },
   {
-    "question": "How to configure Exchange DAG?",
-    "ground_truth": "Database Availability Group provides mailbox database redundancy.",
+    "question": "What is a Virtual I/O Server (VIOS)?",
+    "ground_truth": "VIOS provides virtual I/O services for IBM PowerVM environments.",
     "expected_keywords": [
-      "DAG",
-      "Mailbox",
-      "Replication"
+      "VIOS",
+      "virtual I/O",
+      "PowerVM"
+    ]
+  },
+  {
+    "question": "What is an authoritative restore of SYSVOL?",
+    "ground_truth": "An authoritative restore makes the restored SYSVOL copy authoritative and replicates it to other domain controllers.",
+    "expected_keywords": [
+      "authoritative",
+      "SYSVOL",
+      "domain controllers"
+    ]
+  },
+  {
+    "question": "What is Windows Server management?",
+    "ground_truth": "Windows Server management involves managing and configuring Windows Server environments.",
+    "expected_keywords": [
+      "Windows Server",
+      "management",
+      "configuration"
     ]
   }
 ]

@@ -132,7 +132,7 @@ def ingest():
     )
 
     print(
-        "Embedding model  : BAAI/bge-small-en-v1.5"
+        "Embedding model  : D:\Models\bge-small-en-v1.5"
     )
 
     print(
