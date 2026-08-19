@@ -44,6 +44,26 @@ Grounded Answer + Sources
       ▼
 Monitoring Metrics
 ```
+--------------
+## 🚀 Problem Description
+
+IT infrastructure teams rely on large and diverse technical documentation covering platforms such as **VMware vSphere, Windows Server, Active Directory, IBM PowerVM / VIOS, and server administration**.
+
+Finding the correct technical information across large volumes of documentation can be time-consuming. Traditional keyword-based search may miss semantically relevant information, while general-purpose Large Language Models (LLMs) may generate technically plausible answers that are not supported by the available documentation.
+
+This project addresses these challenges by building a **Retrieval-Augmented Generation (RAG) assistant specifically for IT infrastructure knowledge**.
+
+The system is designed to:
+
+* **Retrieve relevant technical information** from a local knowledge base of IT infrastructure documentation.
+* **Combine semantic and keyword retrieval** using vector search and BM25.
+* **Improve retrieval ranking** using Reciprocal Rank Fusion (RRF).
+* **Generate grounded answers** using a local Qwen2.5-0.5B-Instruct model and the retrieved documentation.
+* **Reduce unsupported answers and hallucinations** by restricting generation to the retrieved context.
+* **Provide source attribution** so users can identify the documentation used to generate an answer.
+* **Evaluate retrieval quality objectively** by comparing the hybrid retriever against a vector-search baseline using Hit@K and MRR.
+
+The main goal is not simply to build an IT chatbot, but to create a **reliable and measurable RAG pipeline** where the quality of document retrieval can be evaluated before relying on the generated answers.
 
 ---
 
